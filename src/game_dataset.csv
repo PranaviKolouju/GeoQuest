@@ -1,0 +1,195 @@
+id,Continent,Country,Country_Lower,latitude,longitude,Image Path,Easy Image Path
+1,Asia,Afghanistan,afghanistan,33.9391,67.71,CountryImages/Afghanistan.png,Easy_CountryImages/Afghanistan.png
+2,Europe,Albania,albania,41.1533,20.1683,CountryImages/Albania.png,Easy_CountryImages/Albania.png
+3,Africa,Algeria,algeria,28.0339,1.65963,CountryImages/Algeria.png,Easy_CountryImages/Algeria.png
+4,Europe,Andorra,andorra,42.5462,1.60155,CountryImages/Andorra.png,Easy_CountryImages/Andorra.png
+5,Africa,Angola,angola,-11.2027,17.8739,CountryImages/Angola.png,Easy_CountryImages/Angola.png
+6,North America,Antigua and Barbuda,antigua and barbuda,17.0608,-61.7964,CountryImages/Antigua and Barbuda.png,Easy_CountryImages/Antigua and Barbuda.png
+7,South America,Argentina,argentina,-38.4161,-63.6167,CountryImages/Argentina.png,Easy_CountryImages/Argentina.png
+8,Europe,Armenia,armenia,40.0691,45.0382,CountryImages/Armenia.png,Easy_CountryImages/Armenia.png
+9,Oceania,Australia,australia,-25.2744,133.775,CountryImages/Australia.png,Easy_CountryImages/Australia.png
+10,Europe,Austria,austria,47.5162,14.5501,CountryImages/Austria.png,Easy_CountryImages/Austria.png
+11,Europe,Azerbaijan,azerbaijan,40.1431,47.5769,CountryImages/Azerbaijan.png,Easy_CountryImages/Azerbaijan.png
+12,North America,Bahamas,bahamas,25.0343,-77.3963,CountryImages/Bahamas.png,Easy_CountryImages/Bahamas.png
+13,Asia,Bahrain,bahrain,25.9304,50.6378,CountryImages/Bahrain.png,Easy_CountryImages/Bahrain.png
+14,Asia,Bangladesh,bangladesh,23.685,90.3563,CountryImages/Bangladesh.png,Easy_CountryImages/Bangladesh.png
+15,North America,Barbados,barbados,13.1939,-59.5432,CountryImages/Barbados.png,Easy_CountryImages/Barbados.png
+16,Europe,Belarus,belarus,53.7098,27.9534,CountryImages/Belarus.png,Easy_CountryImages/Belarus.png
+17,Europe,Belgium,belgium,50.5039,4.46994,CountryImages/Belgium.png,Easy_CountryImages/Belgium.png
+18,North America,Belize,belize,17.1899,-88.4977,CountryImages/Belize.png,Easy_CountryImages/Belize.png
+19,Africa,Benin,benin,9.30769,2.31583,CountryImages/Benin.png,Easy_CountryImages/Benin.png
+20,Asia,Bhutan,bhutan,27.5142,90.4336,CountryImages/Bhutan.png,Easy_CountryImages/Bhutan.png
+21,South America,Bolivia,bolivia,-16.2902,-63.5887,CountryImages/Bolivia.png,Easy_CountryImages/Bolivia.png
+22,Europe,Bosnia and Herzegovina,bosnia and herzegovina,43.9159,17.6791,CountryImages/Bosnia and Herzegovina.png,Easy_CountryImages/Bosnia and Herzegovina.png
+23,Africa,Botswana,botswana,-22.3285,24.6849,CountryImages/Botswana.png,Easy_CountryImages/Botswana.png
+24,South America,Brazil,brazil,-14.235,-51.9253,CountryImages/Brazil.png,Easy_CountryImages/Brazil.png
+25,Asia,Brunei,brunei,4.53528,114.728,CountryImages/Brunei.png,Easy_CountryImages/Brunei.png
+26,Europe,Bulgaria,bulgaria,42.7339,25.4858,CountryImages/Bulgaria.png,Easy_CountryImages/Bulgaria.png
+27,Africa,Burkina Faso,burkina faso,12.2383,-1.5616,CountryImages/Burkina Faso.png,Easy_CountryImages/Burkina Faso.png
+28,Asia,Burma,burma,21.9162,95.956,CountryImages/Burma.png,Easy_CountryImages/Burma.png
+29,Africa,Burundi,burundi,-3.37306,29.9189,CountryImages/Burundi.png,Easy_CountryImages/Burundi.png
+30,Asia,Cambodia,cambodia,12.5657,104.991,CountryImages/Cambodia.png,Easy_CountryImages/Cambodia.png
+31,Africa,Cameroon,cameroon,7.36972,12.3547,CountryImages/Cameroon.png,Easy_CountryImages/Cameroon.png
+32,North America,Canada,canada,56.1304,-106.347,CountryImages/Canada.png,Easy_CountryImages/Canada.png
+33,Africa,Cape Verde,cape verde,16.0021,-24.0132,CountryImages/Cape Verde.png,Easy_CountryImages/Cape Verde.png
+34,Africa,Central African Republic,central african republic,6.61111,20.9394,CountryImages/Central African Republic.png,Easy_CountryImages/Central African Republic.png
+35,Africa,Chad,chad,15.4542,18.7322,CountryImages/Chad.png,Easy_CountryImages/Chad.png
+36,South America,Chile,chile,-35.6751,-71.543,CountryImages/Chile.png,Easy_CountryImages/Chile.png
+37,Asia,China,china,35.8617,104.195,CountryImages/China.png,Easy_CountryImages/China.png
+38,South America,Colombia,colombia,4.57087,-74.2973,CountryImages/Colombia.png,Easy_CountryImages/Colombia.png
+39,Africa,Comoros,comoros,-11.875,43.8722,CountryImages/Comoros.png,Easy_CountryImages/Comoros.png
+40,North America,Costa Rica,costa rica,9.74892,-83.7534,CountryImages/Costa Rica.png,Easy_CountryImages/Costa Rica.png
+41,Europe,Croatia,croatia,45.1,15.2,CountryImages/Croatia.png,Easy_CountryImages/Croatia.png
+42,North America,Cuba,cuba,21.5218,-77.7812,CountryImages/Cuba.png,Easy_CountryImages/Cuba.png
+43,Europe,Cyprus,cyprus,35.1264,33.4299,CountryImages/Cyprus.png,Easy_CountryImages/Cyprus.png
+44,Europe,Czech Republic,czech republic,49.8175,15.473,CountryImages/Czech Republic.png,Easy_CountryImages/Czech Republic.png
+45,Africa,Democratic Republic of Congo,democratic republic of congo,-4.03833,21.7587,CountryImages/Democratic Republic of Congo.png,Easy_CountryImages/Democratic Republic of Congo.png
+46,Europe,Denmark,denmark,56.2639,9.50179,CountryImages/Denmark.png,Easy_CountryImages/Denmark.png
+47,Africa,Djibouti,djibouti,11.8251,42.5903,CountryImages/Djibouti.png,Easy_CountryImages/Djibouti.png
+48,North America,Dominica,dominica,15.415,-61.371,CountryImages/Dominica.png,Easy_CountryImages/Dominica.png
+49,North America,Dominican Republic,dominican republic,18.7357,-70.1627,CountryImages/Dominican Republic.png,Easy_CountryImages/Dominican Republic.png
+50,Asia,East Timor,east timor,-8.8742,125.728,CountryImages/East Timor.png,Easy_CountryImages/East Timor.png
+51,South America,Ecuador,ecuador,-1.83124,-78.1834,CountryImages/Ecuador.png,Easy_CountryImages/Ecuador.png
+52,Africa,Egypt,egypt,26.8206,30.8025,CountryImages/Egypt.png,Easy_CountryImages/Egypt.png
+53,North America,El Salvador,el salvador,13.7942,-88.8965,CountryImages/El Salvador.png,Easy_CountryImages/El Salvador.png
+54,Africa,Equatorial Guinea ,equatorial guinea,1.6508,10.2679,CountryImages/Equatorial Guinea.png,Easy_CountryImages/Equatorial Guinea .png
+55,Africa,Eritrea,eritrea,15.1794,39.7823,CountryImages/Eritrea.png,Easy_CountryImages/Eritrea.png
+56,Europe,Estonia,estonia,58.5953,25.0136,CountryImages/Estonia.png,Easy_CountryImages/Estonia.png
+57,Africa,Ethiopia,ethiopia,9.145,40.4897,CountryImages/Ethiopia.png,Easy_CountryImages/Ethiopia.png
+58,Oceania,Fiji,fiji,-16.5782,179.414,CountryImages/Fiji.png,Easy_CountryImages/Fiji.png
+59,Europe,Finland,finland,61.9241,25.7482,CountryImages/Finland.png,Easy_CountryImages/Finland.png
+60,Europe,France,france,46.2276,2.21375,CountryImages/France.png,Easy_CountryImages/France.png
+61,Africa,Gabon,gabon,-0.803689,11.6094,CountryImages/Gabon.png,Easy_CountryImages/Gabon.png
+62,Africa,Gambia,gambia,13.4432,-15.3101,CountryImages/Gambia.png,Easy_CountryImages/Gambia.png
+63,Europe,Georgia,georgia,42.3154,43.3569,CountryImages/Georgia.png,Easy_CountryImages/Georgia.png
+64,Europe,Germany,germany,51.1657,10.4515,CountryImages/Germany.png,Easy_CountryImages/Germany.png
+65,Africa,Ghana,ghana,7.94653,-1.02319,CountryImages/Ghana.png,Easy_CountryImages/Ghana.png
+66,Europe,Greece,greece,39.0742,21.8243,CountryImages/Greece.png,Easy_CountryImages/Greece.png
+67,North America,Grenada,grenada,12.2628,-61.6042,CountryImages/Grenada.png,Easy_CountryImages/Grenada.png
+68,North America,Guatemala,guatemala,15.7835,-90.2308,CountryImages/Guatemala.png,Easy_CountryImages/Guatemala.png
+70,Africa,Guinea-Bissau,guinea-bissau,11.8037,-15.1804,CountryImages/Guinea-Bissau.png,Easy_CountryImages/Guinea-Bissau.png
+69,Africa,Guinea,guinea,9.94559,-9.69664,CountryImages/Guinea.png,Easy_CountryImages/Guinea.png
+71,South America,Guyana,guyana,4.86042,-58.9302,CountryImages/Guyana.png,Easy_CountryImages/Guyana.png
+72,North America,Haiti,haiti,18.9712,-72.2852,CountryImages/Haiti.png,Easy_CountryImages/Haiti.png
+73,North America,Honduras,honduras,15.2,-86.2419,CountryImages/Honduras.png,Easy_CountryImages/Honduras.png
+74,Europe,Hungary,hungary,47.1625,19.5033,CountryImages/Hungary.png,Easy_CountryImages/Hungary.png
+75,Europe,Iceland,iceland,64.9631,-19.0208,CountryImages/Iceland.png,Easy_CountryImages/Iceland.png
+76,Asia,India,india,20.5937,78.9629,CountryImages/India.png,Easy_CountryImages/India.png
+77,Asia,Indonesia,indonesia,-0.789275,113.921,CountryImages/Indonesia.png,Easy_CountryImages/Indonesia.png
+78,Asia,Iran,iran,32.4279,53.688,CountryImages/Iran.png,Easy_CountryImages/Iran.png
+79,Asia,Iraq,iraq,33.2232,43.6793,CountryImages/Iraq.png,Easy_CountryImages/Iraq.png
+80,Europe,Ireland,ireland,53.4129,-8.24389,CountryImages/Ireland.png,Easy_CountryImages/Ireland.png
+81,Asia,Israel,israel,31.0461,34.8516,CountryImages/Israel.png,Easy_CountryImages/Israel.png
+82,Europe,Italy,italy,41.8719,12.5674,CountryImages/Italy.png,Easy_CountryImages/Italy.png
+83,Africa,Ivory Coast,ivory coast,7.54,-5.5471,CountryImages/Ivory Coast.png,Easy_CountryImages/Ivory Coast.png
+84,North America,Jamaica,jamaica,18.1096,-77.2975,CountryImages/Jamaica.png,Easy_CountryImages/Jamaica.png
+85,Asia,Japan,japan,36.2048,138.253,CountryImages/Japan.png,Easy_CountryImages/Japan.png
+86,Asia,Jordan,jordan,30.5852,36.2384,CountryImages/Jordan.png,Easy_CountryImages/Jordan.png
+87,Asia,Kazakhstan,kazakhstan,48.0196,66.9237,CountryImages/Kazakhstan.png,Easy_CountryImages/Kazakhstan.png
+88,Africa,Kenya,kenya,-0.023559,37.9062,CountryImages/Kenya.png,Easy_CountryImages/Kenya.png
+89,Oceania,Kiribati,kiribati,-3.37042,-168.734,CountryImages/Kiribati.png,Easy_CountryImages/Kiribati.png
+90,Asia,Kuwait,kuwait,29.3117,47.4818,CountryImages/Kuwait.png,Easy_CountryImages/Kuwait.png
+91,Asia,Kyrgyzstan,kyrgyzstan,41.2044,74.7661,CountryImages/Kyrgyzstan.png,Easy_CountryImages/Kyrgyzstan.png
+92,Asia,Laos,laos,19.8563,102.495,CountryImages/Laos.png,Easy_CountryImages/Laos.png
+93,Europe,Latvia,latvia,56.8796,24.6032,CountryImages/Latvia.png,Easy_CountryImages/Latvia.png
+94,Asia,Lebanon,lebanon,33.8547,35.8623,CountryImages/Lebanon.png,Easy_CountryImages/Lebanon.png
+95,Africa,Lesotho,lesotho,-29.61,28.2336,CountryImages/Lesotho.png,Easy_CountryImages/Lesotho.png
+96,Africa,Liberia,liberia,6.42805,-9.4295,CountryImages/Liberia.png,Easy_CountryImages/Liberia.png
+97,Africa,Libya,libya,26.3351,17.2283,CountryImages/Libya.png,Easy_CountryImages/Libya.png
+98,Europe,Liechtenstein,liechtenstein,47.166,9.55537,CountryImages/Liechtenstein.png,Easy_CountryImages/Liechtenstein.png
+99,Europe,Lithuania,lithuania,55.1694,23.8813,CountryImages/Lithuania.png,Easy_CountryImages/Lithuania.png
+100,Europe,Luxembourg,luxembourg,49.8153,6.12958,CountryImages/Luxembourg.png,Easy_CountryImages/Luxembourg.png
+101,Europe,Macedonia,macedonia,41.6086,21.7453,CountryImages/Macedonia.png,Easy_CountryImages/Macedonia.png
+102,Africa,Madagascar,madagascar,-18.7669,46.8691,CountryImages/Madagascar.png,Easy_CountryImages/Madagascar.png
+103,Africa,Malawi,malawi,-13.2543,34.3015,CountryImages/Malawi.png,Easy_CountryImages/Malawi.png
+104,Asia,Malaysia,malaysia,4.21048,101.976,CountryImages/Malaysia.png,Easy_CountryImages/Malaysia.png
+105,Asia,Maldives,maldives,3.20278,73.2207,CountryImages/Maldives.png,Easy_CountryImages/Maldives.png
+106,Africa,Mali,mali,17.5707,-3.99617,CountryImages/Mali.png,Easy_CountryImages/Mali.png
+107,Europe,Malta,malta,35.9375,14.3754,CountryImages/Malta.png,Easy_CountryImages/Malta.png
+108,Oceania,Marshall Islands,marshall islands,7.13147,171.184,CountryImages/Marshall Islands.png,Easy_CountryImages/Marshall Islands.png
+109,Africa,Mauritania,mauritania,21.0079,-10.9408,CountryImages/Mauritania.png,Easy_CountryImages/Mauritania.png
+110,Africa,Mauritius,mauritius,-20.3484,57.5522,CountryImages/Mauritius.png,Easy_CountryImages/Mauritius.png
+111,North America,Mexico,mexico,23.6345,-102.553,CountryImages/Mexico.png,Easy_CountryImages/Mexico.png
+112,Oceania,Micronesia,micronesia,7.42555,150.551,CountryImages/Micronesia.png,Easy_CountryImages/Micronesia.png
+113,Europe,Moldova,moldova,47.4116,28.3699,CountryImages/Moldova.png,Easy_CountryImages/Moldova.png
+114,Europe,Monaco,monaco,43.7503,7.41284,CountryImages/Monaco.png,Easy_CountryImages/Monaco.png
+115,Asia,Mongolia,mongolia,46.8625,103.847,CountryImages/Mongolia.png,Easy_CountryImages/Mongolia.png
+116,Europe,Montenegro,montenegro,42.7087,19.3744,CountryImages/Montenegro.png,Easy_CountryImages/Montenegro.png
+117,Africa,Morocco,morocco,31.7917,-7.09262,CountryImages/Morocco.png,Easy_CountryImages/Morocco.png
+118,Africa,Mozambique,mozambique,-18.6657,35.5296,CountryImages/Mozambique.png,Easy_CountryImages/Mozambique.png
+119,Africa,Namibia,namibia,-22.9576,18.4904,CountryImages/Namibia.png,Easy_CountryImages/Namibia.png
+120,Oceania,Nauru,nauru,-0.522778,166.932,CountryImages/Nauru.png,Easy_CountryImages/Nauru.png
+121,Asia,Nepal,nepal,28.3949,84.124,CountryImages/Nepal.png,Easy_CountryImages/Nepal.png
+122,Europe,Netherlands,netherlands,52.1326,5.29127,CountryImages/Netherlands.png,Easy_CountryImages/Netherlands.png
+123,Oceania,New Zealand,new zealand,-40.9006,174.886,CountryImages/New Zealand.png,Easy_CountryImages/New Zealand.png
+124,North America,Nicaragua,nicaragua,12.8654,-85.2072,CountryImages/Nicaragua.png,Easy_CountryImages/Nicaragua.png
+125,Africa,Niger,niger,17.6078,8.08167,CountryImages/Niger.png,Easy_CountryImages/Niger.png
+126,Africa,Nigeria,nigeria,9.082,8.67528,CountryImages/Nigeria.png,Easy_CountryImages/Nigeria.png
+127,Asia,North Korea,north korea,40.3399,127.51,CountryImages/North Korea.png,Easy_CountryImages/North Korea.png
+128,Europe,Norway,norway,60.472,8.46895,CountryImages/Norway.png,Easy_CountryImages/Norway.png
+129,Asia,Oman,oman,21.5126,55.9233,CountryImages/Oman.png,Easy_CountryImages/Oman.png
+130,Asia,Pakistan,pakistan,30.3753,69.3451,CountryImages/Pakistan.png,Easy_CountryImages/Pakistan.png
+131,Oceania,Palau,palau,7.51498,134.583,CountryImages/Palau.png,Easy_CountryImages/Palau.png
+132,North America,Panama,panama,8.53798,-80.7821,CountryImages/Panama.png,Easy_CountryImages/Panama.png
+133,Oceania,Papua New Guinea,papua new guinea,-6.31499,143.956,CountryImages/Papua New Guinea.png,Easy_CountryImages/Papua New Guinea.png
+134,South America,Paraguay,paraguay,-23.4425,-58.4438,CountryImages/Paraguay.png,Easy_CountryImages/Paraguay.png
+135,South America,Peru,peru,-9.18997,-75.0152,CountryImages/Peru.png,Easy_CountryImages/Peru.png
+136,Asia,Philippines,philippines,12.8797,121.774,CountryImages/Philippines.png,Easy_CountryImages/Philippines.png
+137,Europe,Poland,poland,51.9194,19.1451,CountryImages/Poland.png,Easy_CountryImages/Poland.png
+138,Europe,Portugal,portugal,39.3999,-8.22445,CountryImages/Portugal.png,Easy_CountryImages/Portugal.png
+139,Asia,Qatar,qatar,25.3548,51.1839,CountryImages/Qatar.png,Easy_CountryImages/Qatar.png
+140,Africa,Republic of Congo,republic of congo,-0.228021,15.8277,CountryImages/Republic of Congo.png,Easy_CountryImages/Republic of Congo.png
+141,Europe,Romania,romania,45.9432,24.9668,CountryImages/Romania.png,Easy_CountryImages/Romania.png
+142,Europe,Russia,russia,61.524,105.3188,CountryImages/Russia.png,Easy_CountryImages/Russia.png
+143,Africa,Rwanda,rwanda,-1.94028,29.8739,CountryImages/Rwanda.png,Easy_CountryImages/Rwanda.png
+144,North America,Saint Kitts and Nevis,saint kitts and nevis,17.3578,-62.783,CountryImages/Saint Kitts and Nevis.png,Easy_CountryImages/Saint Kitts and Nevis.png
+145,North America,Saint Lucia,saint lucia,13.9094,-60.9789,CountryImages/Saint Lucia.png,Easy_CountryImages/Saint Lucia.png
+146,North America,Saint Vincent and the Grenadines,saint vincent and the grenadines,12.9843,-61.2872,CountryImages/Saint Vincent and the Grenadines.png,Easy_CountryImages/Saint Vincent and the Grenadines.png
+147,Oceania,Samoa,samoa,-13.759,-172.105,CountryImages/Samoa.png,Easy_CountryImages/Samoa.png
+148,Europe,San Marino,san marino,43.9424,12.4578,CountryImages/San Marino.png,Easy_CountryImages/San Marino.png
+149,Africa,Sao Tome and Principe,sao tome and principe,0.1864,6.6131,CountryImages/Sao Tome and Principe.png,Easy_CountryImages/Sao Tome and Principe.png
+150,Asia,Saudi Arabia,saudi arabia,23.8859,45.0792,CountryImages/Saudi Arabia.png,Easy_CountryImages/Saudi Arabia.png
+151,Africa,Senegal,senegal,14.4974,-14.4524,CountryImages/Senegal.png,Easy_CountryImages/Senegal.png
+152,Europe,Serbia,serbia,44.0165,21.0059,CountryImages/Serbia.png,Easy_CountryImages/Serbia.png
+153,Africa,Seychelles,seychelles,-4.67957,55.492,CountryImages/Seychelles.png,Easy_CountryImages/Seychelles.png
+154,Africa,Sierra Leone,sierra leone,8.46056,-11.7799,CountryImages/Sierra Leone.png,Easy_CountryImages/Sierra Leone.png
+155,Asia,Singapore,singapore,1.35208,103.82,CountryImages/Singapore.png,Easy_CountryImages/Singapore.png
+156,Europe,Slovakia,slovakia,48.669,19.699,CountryImages/Slovakia.png,Easy_CountryImages/Slovakia.png
+157,Europe,Slovenia,slovenia,46.1512,14.9955,CountryImages/Slovenia.png,Easy_CountryImages/Slovenia.png
+158,Oceania,Solomon Islands,solomon islands,-9.64571,160.156,CountryImages/Solomon Islands.png,Easy_CountryImages/Solomon Islands.png
+159,Africa,Somalia,somalia,5.15215,46.1996,CountryImages/Somalia.png,Easy_CountryImages/Somalia.png
+160,Africa,South Africa,south africa,-30.5595,22.9375,CountryImages/South Africa.png,Easy_CountryImages/South Africa.png
+161,Asia,South Korea,south korea,35.9078,127.767,CountryImages/South Korea.png,Easy_CountryImages/South Korea.png
+162,Africa,South Sudan,south sudan,6.877,31.307,CountryImages/South Sudan.png,Easy_CountryImages/South Sudan.png
+163,Europe,Spain,spain,40.4637,-3.74922,CountryImages/Spain.png,Easy_CountryImages/Spain.png
+164,Asia,Sri Lanka,sri lanka,7.87305,80.7718,CountryImages/Sri Lanka.png,Easy_CountryImages/Sri Lanka.png
+165,Africa,Sudan,sudan,12.8628,30.2176,CountryImages/Sudan.png,Easy_CountryImages/Sudan.png
+166,South America,Suriname,suriname,3.91931,-56.0278,CountryImages/Suriname.png,Easy_CountryImages/Suriname.png
+167,Africa,Swaziland,swaziland,-26.5225,31.4659,CountryImages/Swaziland.png,Easy_CountryImages/Swaziland.png
+168,Europe,Sweden,sweden,60.1282,18.6435,CountryImages/Sweden.png,Easy_CountryImages/Sweden.png
+169,Europe,Switzerland,switzerland,46.8182,8.22751,CountryImages/Switzerland.png,Easy_CountryImages/Switzerland.png
+170,Asia,Syria,syria,34.8021,38.9968,CountryImages/Syria.png,Easy_CountryImages/Syria.png
+171,Asia,Tajikistan,tajikistan,38.861,71.2761,CountryImages/Tajikistan.png,Easy_CountryImages/Tajikistan.png
+172,Africa,Tanzania,tanzania,-6.36903,34.8888,CountryImages/Tanzania.png,Easy_CountryImages/Tanzania.png
+173,Asia,Thailand,thailand,15.87,100.993,CountryImages/Thailand.png,Easy_CountryImages/Thailand.png
+174,Africa,Togo,togo,8.61954,0.824782,CountryImages/Togo.png,Easy_CountryImages/Togo.png
+175,Oceania,Tonga,tonga,-21.179,-175.198,CountryImages/Tonga.png,Easy_CountryImages/Tonga.png
+176,North America,Trinidad and Tobago,trinidad and tobago,10.6918,-61.2225,CountryImages/Trinidad and Tobago.png,Easy_CountryImages/Trinidad and Tobago.png
+177,Africa,Tunisia,tunisia,33.8869,9.5375,CountryImages/Tunisia.png,Easy_CountryImages/Tunisia.png
+178,Asia,Turkey,turkey,38.9637,35.2433,CountryImages/Turkey.png,Easy_CountryImages/Turkey.png
+179,Asia,Turkmenistan,turkmenistan,38.9697,59.5563,CountryImages/Turkmenistan.png,Easy_CountryImages/Turkmenistan.png
+180,Oceania,Tuvalu,tuvalu,-7.10954,177.649,CountryImages/Tuvalu.png,Easy_CountryImages/Tuvalu.png
+181,Africa,Uganda,uganda,1.37333,32.2903,CountryImages/Uganda.png,Easy_CountryImages/Uganda.png
+182,Europe,Ukraine,ukraine,48.3794,31.1656,CountryImages/Ukraine.png,Easy_CountryImages/Ukraine.png
+183,Asia,United Arab Emirates,united arab emirates,23.4241,53.8478,CountryImages/United Arab Emirates.png,Easy_CountryImages/United Arab Emirates.png
+184,Europe,United Kingdom,united kingdom,55.3781,-3.43597,CountryImages/United Kingdom.png,Easy_CountryImages/United Kingdom.png
+185,North America,United States of America,united states of america,37.0902,-95.7129,CountryImages/United States of America.png,Easy_CountryImages/United States of America.png
+186,South America,Uruguay,uruguay,-32.5228,-55.7658,CountryImages/Uruguay.png,Easy_CountryImages/Uruguay.png
+187,Asia,Uzbekistan,uzbekistan,41.3775,64.5853,CountryImages/Uzbekistan.png,Easy_CountryImages/Uzbekistan.png
+188,Oceania,Vanuatu,vanuatu,-15.3767,166.959,CountryImages/Vanuatu.png,Easy_CountryImages/Vanuatu.png
+189,Europe,Vatican City,vatican city,41.9029,12.4534,CountryImages/Vatican City.png,Easy_CountryImages/Vatican City.png
+190,South America,Venezuela,venezuela,6.42375,-66.5897,CountryImages/Venezuela.png,Easy_CountryImages/Venezuela.png
+191,Asia,Vietnam,vietnam,14.0583,108.277,CountryImages/Vietnam.png,Easy_CountryImages/Vietnam.png
+192,Asia,Yemen,yemen,15.5527,48.5164,CountryImages/Yemen.png,Easy_CountryImages/Yemen.png
+193,Africa,Zambia,zambia,-13.1339,27.8493,CountryImages/Zambia.png,Easy_CountryImages/Zambia.png
+194,Africa,Zimbabwe,zimbabwe,-19.0154,29.1549,CountryImages/Zimbabwe.png,Easy_CountryImages/Zimbabwe.png

@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Papyrus Condensed';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +8,87 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  text-align: center;
+  background-color: #276749; 
+  min-height: 100vh; 
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#gameTitle {
+  color: beige;
+  text-align: center;
+  font-size: 150px;
+}
+
+#gameModeButtons button {
+  margin: 250px 75px;
+  padding: 10px 20px;
+  font-size: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #5C4033;
+  background-color: beige;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#gameModeDirections {
+  color: beige;
+  text-align: center;
+  font-size: 30px;
+}
+
+#continentSelectionCaption {
+  color: #f5f5dc;
+  text-align: center;
+  margin-bottom: 50px;
+  width: 100%;
+  font-size: 70px;
+  transform: translateY(-70px);
+  order: -1;
+  font-family: 'Papyrus Condensed'; 
+}
+
+#mapContainer {
+  position: relative;
+  width: 80%;
+  height: auto;
+  transform: translateX(200px);
+}
+
+#worldMap {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(1.3) translateX(-10px)  translateY(-40px); 
+  margin-top: -20px;
+}
+
+.continentButton {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: beige;
+  color: #5C4033;
+  border: none;
+  border-radius: 20%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1; 
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+.continentButton:hover {
+  background-color: #eae0c8; 
+  color: #4a3c30;
 }
