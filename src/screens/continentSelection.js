@@ -12,17 +12,30 @@ const continents = [
 
 const ContinentSelectionScreen = () => {
 
-  const [showContinentSelection, setShowContinentSelection] = useState(false);
   const [showGame, setShowGame] = useState(false);
-  const [continent, setContinent] = useState('')
+  const [continent, setContinent] = useState('');
 
   const getContinent = (continent) => {
-      setContinent(continent); 
-      setShowGame(true); 
+      setContinent(continent);
+      setShowGame(true);
+      window.globalState.gameContinent = continent;
+      console.log("Game Continent set to:", window.globalState.gameContinent);
+  };
+
+  const filterData = () => {
+      const filteredData = window.globalState.gameData.filter(item => item.Continent === window.globalState.gameContinent);
+
+
+      console.log("Filtered Data:", filteredData);
+      return filteredData;
   };
 
   useEffect(() => {
-      console.log(continent); 
+      if (continent) {
+          filterData(); 
+          window.globalState.gameContinent = continent;
+          console.log("Game Filtered Data set to:", window.globalState.gameFilteredData);
+      }
   }, [continent]);
 
   if (showGame) {
