@@ -92,3 +92,62 @@ code {
   background-color: #eae0c8; 
   color: #4a3c30;
 }
+
+.timerBox {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: beige;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #5C4033;
+  font-size: 45px;
+}
+
+.scoreBox {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: beige;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #5C4033;
+  font-size: 45px;
+  transform: translateX(-1470px)
+}
+
+.textInput {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid beige;
+  margin-right: 20px;
+  transform: translateX(100px) translateY(400px); 
+}
+
+.submitButton {
+  font-size: 20px;
+  padding: 10px 20px;
+  color: #5C4033;
+  background-color: beige;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;  /* Space between input and button */
+  cursor: pointer;
+  transform: translateX(100px) translateY(400px); 
+}
+
+.previousGuessesBox {
+  background: beige;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  color: #5C4033;
+  font-size: 20px;
+  margin-bottom: 20px;
+  transform: translateX(-500px) translateY(-100px);
+  height: 400px;
+  overflow-y: auto; 
+}

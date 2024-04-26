@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Game from './Game';
 
 const continents = [
   { name: 'Africa', position: { left: '50%', top: '45%' } },
@@ -10,6 +11,24 @@ const continents = [
 ];
 
 const ContinentSelectionScreen = () => {
+
+  const [showContinentSelection, setShowContinentSelection] = useState(false);
+  const [showGame, setShowGame] = useState(false);
+  const [continent, setContinent] = useState('')
+
+  const getContinent = (continent) => {
+      setContinent(continent); 
+      setShowGame(true); 
+  };
+
+  useEffect(() => {
+      console.log(continent); 
+  }, [continent]);
+
+  if (showGame) {
+      return <Game />;
+  }
+
   return (
     <header className="continentSelection">
       <h2 id="continentSelectionCaption">Choose a Continent!</h2>
@@ -24,6 +43,7 @@ const ContinentSelectionScreen = () => {
               left: continent.position.left,
               top: continent.position.top,
             }}
+            onClick = {() => getContinent(continent.name)}
           >
             {continent.name}
           </button>

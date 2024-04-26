@@ -2,7 +2,8 @@ import React from "react";
 import './App.css';
 import GameModeSelectionScreen from './screens/gameModeSelection';
 import ContinentSelectionScreen from './screens/continentSelection';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Game from './screens/Game';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
           </Route>
           <Route exact path = "/continent">
             <ContinentSelectionScreen/>
+          </Route>
+          <Route exact path = "/game">
+              <Game/>
           </Route>
         </Switch>
       </div>
