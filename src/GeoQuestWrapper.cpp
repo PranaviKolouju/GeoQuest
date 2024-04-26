@@ -1,117 +1,61 @@
-#include <emscripten.h>
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include <string>
 #include <vector>
-
-using namespace std;
+#include <string>
+#include <emscripten.h>
 
 extern "C" {
 
-    EMSCRIPTEN_KEEPALIVE
-
-    int add5(int a) {
-        return a+5;
+EMSCRIPTEN_KEEPALIVE
+const char* readCSV() {
+    const char* filename = "src/game_dataset.csv";
+    std::ifstream file(filename);
+    if (!file.is_open()) {
+        return "File not found";
     }
 
-    // const char* readCSV(const char* filename) {
-    //     // Use a string stream to avoid memory leaks and manual deallocation
-    //     stringstream output;
-        
-    //     // Open the CSV file
-    //     ifstream file(filename);
-    //     if (!file.is_open()) {
-    //         // Include the filename in the error message
-    //         cerr << "Could not open file: " << filename << endl;
-    //         return nullptr; // Return a null pointer to indicate an error
-    //     }
+    std::vector<std::string> headers;
+    std::string line;
+    // Assume the first line is headers
+    if (std::getline(file, line)) {
+        std::istringstream headerStream(line);
+        std::string header;
+        while (std::getline(headerStream, header, ',')) {
+            headers.push_back(header);
+        }
+    }
 
-    //     // Read the file line by line
-    //     string line;
-    //     while (getline(file, line)) {
-    //         // Add each cell to the output stream, handling commas within quotes
-    //         stringstream lineStream(line);
-    //         string cell;
-    //         bool firstCell = true;
-    //         output << "[";
+    // Read the rest of the data
+    std::vector<std::string> rows;
+    while (std::getline(file, line)) {
+        std::istringstream lineStream(line);
+        std::string cell;
+        std::string rowResult = "{";
+        int columnIndex = 0;
+        while (std::getline(lineStream, cell, ',')) {
+            if (columnIndex > 0) rowResult += ", ";
+            rowResult += "\"" + headers[columnIndex] + "\": \"" + cell + "\"";
+            columnIndex++;
+        }
+        rowResult += "}";
+        rows.push_back(rowResult);
+    }
+    file.close();
 
-    //         while (lineStream.good()) {
-    //             getline(lineStream, cell, ',');
-    //             // Replace " with "" for valid JSON strings
-    //             size_t startPos = 0;
-    //             while ((startPos = cell.find("\"", startPos)) != string::npos) {
-    //                 cell.replace(startPos, 1, "\"\"");
-    //                 startPos += 2; // Move past the inserted characters
-    //             }
-    //             if (!firstCell) {
-    //                 output << ",";
-    //             }
-    //             output << "\"" << cell << "\"";
-    //             firstCell = false;
-    //         }
+    // Combine all rows into a single string
+    std::string result = "[";
+    for (size_t i = 0; i < rows.size(); ++i) {
+        if (i > 0) result += ", ";
+        result += rows[i];
+    }
+    result += "]";
 
-    //         output << "],";
-    //     }
+    // Allocate memory on the heap that JavaScript can read
+    char* output = new char[result.size() + 1];
+    std::copy(result.begin(), result.end(), output);
+    output[result.size()] = '\0';  // Null-terminate the string
 
-    //     // Remove the last comma from the output
-    //     if (!output.str().empty()) {
-    //         output.seekp(-1, ios_base::end);
-    //         output << "]";
-    //     }
-
-    //     // Convert the string stream into a string
-    //     string outputString = output.str();
-        
-    //     // Allocate memory for the C-style string
-    //     char* outputCStr = new char[outputString.size() + 1];
-        
-    //     // Copy the contents and return
-    //     strcpy(outputCStr, outputString.c_str());
-    //     return outputCStr;
-    // }
+    return output;
 }
-
-
-
-    // GeoQuest* GeoQuest_new() {
-    //     return new GeoQuest();
-    // }
-
-    // void setMode(GeoQuest* game, const char* mode) {
-    //     if (game) {
-    //         game->setMode(std::string(mode));
-    //     }
-    // }
-
-    // void GeoQuest_setContinent(GeoQuest* game, const char* continent) {
-    //     if (game) {
-    //         game->setContinent(std::string(continent));
-    //     }
-    // }
-
-    // const char* GeoQuest_getMode(GeoQuest* game) {
-    //     static std::string lastMode;
-    //     if (game) {
-    //         lastMode = game->getMode();
-    //         return lastMode.c_str();
-    //     }
-    //     return "";
-    // }
-
-    // const char* GeoQuest_getContinent(GeoQuest* game) {
-    //     static std::string lastContinent;
-    //     if (game) {
-    //         lastContinent = game->getContinent();
-    //         return lastContinent.c_str();
-    //     }
-    //     return "";
-    // }
-
-    // int GeoQuest_getScore(GeoQuest* game) {
-    //     if (game) {
-    //         return game->getScore();
-    //     }
-    //     return 0;
-    // }
-
+}
