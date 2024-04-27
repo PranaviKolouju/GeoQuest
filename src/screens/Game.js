@@ -9,6 +9,14 @@ const Game = () => {
     const [previousGuesses, setPreviousGuesses] = useState([]);
     const [stack, setStack] = useState(null);
 
+    // Function to shuffle an array
+    const shuffleArray = (array) => {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1)); // Random index from 0 to i
+            [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+        }
+    };
+
     useEffect(() => {
         const initWasm = async () => {
             const wasmModuleInstance = WebAssemblyWrapper({
@@ -22,8 +30,9 @@ const Game = () => {
             setStack(stackInstance);
             console.log("Stack initialized successfully!");
 
-            // Load data into stack after initialization
+            // Load and shuffle data into stack after initialization
             const stackData = window.globalState.gameFilteredData;
+            shuffleArray(stackData);  // Shuffle the data randomly
             stackData.forEach(item => {
                 const itemJson = JSON.stringify(item);
                 stackInstance.push(itemJson);
@@ -31,6 +40,19 @@ const Game = () => {
 
             // Log stack size after data is loaded
             console.log("Stack size:", stackInstance.size());
+
+            const currentCountry = JSON.parse(stackInstance.pop());
+            console.log("Current Country: ", currentCountry.Country_Lower);
+            console.log("Current Country: ", currentCountry.latitude);
+            console.log("Current Country: ", currentCountry.longitude);
+
+            console.log("Stack size:", stackInstance.size());
+
+            const nextCountry = JSON.parse(stackInstance.pop());
+            console.log("Next Country: ", nextCountry.Country_Lower);
+            console.log("Next Country: ", nextCountry.latitude);
+            console.log("Next Country: ", nextCountry.longitude);
+            
         };
 
         initWasm();
@@ -48,6 +70,7 @@ const Game = () => {
         // Cleanup on component unmount
         return () => clearInterval(timerInterval);
     }, []);
+
 
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
