@@ -148,7 +148,12 @@ const GameScreen = () => {
         return country && window.globalState.gameMode === "easy" ? country['Easy Image Path'] : country['Image Path'];
     };
 
+    const storeScore = () => {
+        window.globalState.gameScore = score;
+    };
+
     if (showScoreBoard || timeLeft <= 0) {
+        storeScore();
         return <ScoreBoardScreen />;
     }
 

@@ -8,7 +8,8 @@ window.globalState = {
   gameMode: "",
   gameData: "",
   gameContinent: "",
-  gameFilteredData: ""
+  gameFilteredData: "",
+  gameScore: ""
 };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
