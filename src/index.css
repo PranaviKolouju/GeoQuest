@@ -100,7 +100,7 @@ code {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   color: #5C4033;
   font-size: 4vh; /* Responsive font size */
-  transform: translateX(-172vh);
+  transform: translateX(-155vh);
 }
 
 .textInput, .submitButton {
