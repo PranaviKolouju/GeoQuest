@@ -91,16 +91,15 @@ code {
 }
 
 .scoreBox {
+  left: 4vh;
+  top: 2vh;
   position: fixed;
-  top: 2vh; /* Responsive top spacing */
-  right: 2vw; /* Responsive right spacing */
   background: beige;
   padding: 1vh 1vw; /* Responsive padding */
   border-radius: 1vh; /* Responsive border-radius */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   color: #5C4033;
   font-size: 4vh; /* Responsive font size */
-  transform: translateX(-155vh);
 }
 
 .textInput, .submitButton {
