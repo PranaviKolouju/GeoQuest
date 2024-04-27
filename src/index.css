@@ -124,7 +124,7 @@ code {
   border-radius: 5px;
   border: 2px solid beige;
   margin-right: 20px;
-  transform: translateX(100px) translateY(400px); 
+  transform: translateX(190px) translateY(400px); 
 }
 
 .submitButton {
@@ -136,7 +136,7 @@ code {
   border-radius: 5px;
   margin-top: 10px;  /* Space between input and button */
   cursor: pointer;
-  transform: translateX(100px) translateY(400px); 
+  transform: translateX(190px) translateY(400px); 
 }
 
 .previousGuessesBox {
@@ -147,7 +147,19 @@ code {
   color: #5C4033;
   font-size: 20px;
   margin-bottom: 20px;
-  transform: translateX(-500px) translateY(-100px);
+  transform: translateX(-500px) translateY(-250px);
   height: 400px;
   overflow-y: auto; 
+}
+
+.imageContainer img {
+  max-width: 100%; 
+  height: auto;    
+  display: block;  
+}
+
+.imageContainer {
+  max-width: 450px; /* Limit the size of the container */
+  margin: auto;     /* Center the container if it's smaller than the parent */
+  transform: translateX(180px) translateY(200px);
 }

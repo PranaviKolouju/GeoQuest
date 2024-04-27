@@ -8,12 +8,12 @@ const Game = () => {
     const [score, setScore] = useState(0);
     const [previousGuesses, setPreviousGuesses] = useState([]);
     const [stack, setStack] = useState(null);
+    const [currentCountry, setCurrentCountry] = useState(null);
 
-    // Function to shuffle an array
     const shuffleArray = (array) => {
         for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1)); // Random index from 0 to i
-            [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
         }
     };
 
@@ -27,32 +27,15 @@ const Game = () => {
 
             const core = await wasmModuleInstance;
             const stackInstance = new core.JsonStack();
-            setStack(stackInstance);
-            console.log("Stack initialized successfully!");
 
-            // Load and shuffle data into stack after initialization
             const stackData = window.globalState.gameFilteredData;
-            shuffleArray(stackData);  // Shuffle the data randomly
+            shuffleArray(stackData);
             stackData.forEach(item => {
                 const itemJson = JSON.stringify(item);
                 stackInstance.push(itemJson);
             });
 
-            // Log stack size after data is loaded
-            console.log("Stack size:", stackInstance.size());
-
-            const currentCountry = JSON.parse(stackInstance.pop());
-            console.log("Current Country: ", currentCountry.Country_Lower);
-            console.log("Current Country: ", currentCountry.latitude);
-            console.log("Current Country: ", currentCountry.longitude);
-
-            console.log("Stack size:", stackInstance.size());
-
-            const nextCountry = JSON.parse(stackInstance.pop());
-            console.log("Next Country: ", nextCountry.Country_Lower);
-            console.log("Next Country: ", nextCountry.latitude);
-            console.log("Next Country: ", nextCountry.longitude);
-            
+            setStack(stackInstance);
         };
 
         initWasm();
@@ -67,19 +50,48 @@ const Game = () => {
             });
         }, 1000);
 
-        // Cleanup on component unmount
         return () => clearInterval(timerInterval);
     }, []);
 
+    useEffect(() => {
+        if (stack && !currentCountry) {
+            popAndDisplayNextCountry();
+        }
+    }, [stack]);
 
-    const handleInputChange = (event) => {
-        setInputValue(event.target.value);
+    const popAndDisplayNextCountry = () => {
+        if (stack && stack.size() > 0) {
+            const countryJson = stack.pop();
+            const countryData = JSON.parse(countryJson);
+            setCurrentCountry(countryData);
+            console.log(countryData.Country);
+        } else {
+            console.log("Stack is empty, no more countries to display.");
+            setCurrentCountry(null);
+        }
     };
 
     const handleSubmit = () => {
-        console.log("Submitted value:", inputValue);
-        setPreviousGuesses(prevGuesses => [inputValue, ...prevGuesses]);
-        setInputValue(""); // Clear input field after submission
+        if (inputValue.trim() === "") {
+            console.log("Empty input, not accepted.");
+            return;
+        }
+
+        const guess = inputValue.trim();
+        setPreviousGuesses([guess.toUpperCase(), ...previousGuesses]); // Add guess in uppercase to previous guesses
+
+        if (currentCountry && guess.toLowerCase() === currentCountry.Country_Lower) {
+            setScore(score + 1);
+            popAndDisplayNextCountry();
+        } else {
+            console.log("Wrong guess.");
+        }
+
+        setInputValue(""); 
+    };
+
+    const handleInputChange = (event) => {
+        setInputValue(event.target.value);
     };
 
     const handleKeyPress = (event) => {
@@ -88,8 +100,17 @@ const Game = () => {
         }
     };
 
+    const getImagePath = (country) => {
+        return country && window.globalState.gameMode === "easy" ? country['Easy Image Path'] : country['Image Path'];
+    };
+
     return (
         <div className="gameContainer">
+            {currentCountry && (
+                <div className="imageContainer">
+                    <img src={getImagePath(currentCountry)} alt="Country" />
+                </div>
+            )}
             <div className="timerBox">
                 {timeLeft} seconds
             </div>
@@ -107,7 +128,7 @@ const Game = () => {
                 Score: {score}
             </div>
             <div className="previousGuessesBox">
-                <h4>Previous Guesses</h4>
+                <h4>PREVIOUS GUESSES</h4>
                 {previousGuesses.map((guess, index) => (
                     <div key={index}>{guess}</div>
                 ))}
