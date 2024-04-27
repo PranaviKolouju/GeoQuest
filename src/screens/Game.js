@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import WebAssemblyWrapper from './geoquest_wasm.js';
 import WebAssemblyBinary from './geoquest_wasm.wasm';
+import ScoreBoardScreen from './scoreBoard.js';
 
-const Game = () => {
+const GameScreen = () => {
     const [timeLeft, setTimeLeft] = useState(120);
     const [inputValue, setInputValue] = useState("");
     const [score, setScore] = useState(0);
@@ -10,6 +11,7 @@ const Game = () => {
     const [stack, setStack] = useState(null);
     const [currentCountry, setCurrentCountry] = useState(null);
     const [hint, setHint] = useState("");
+    const [showScoreBoard, setShowScoreBoard] = useState(false);
 
     const shuffleArray = (array) => {
         for (let i = array.length - 1; i > 0; i--) {
@@ -19,8 +21,8 @@ const Game = () => {
     };
 
     const generateHint = (guess) => {
-        let hintMessage = ""; // Use `let` to allow mutation
-        if (currentCountry) { // Ensure `currentCountry` is set
+        let hintMessage = ""; 
+        if (currentCountry) { 
             window.globalState.gameFilteredData.forEach(item => {
                 if (item.Country_Lower === guess.toLowerCase()) {
                     if (parseFloat(item.latitude) < parseFloat(currentCountry.latitude)) {
@@ -29,7 +31,6 @@ const Game = () => {
                     if (parseFloat(item.latitude) > parseFloat(currentCountry.latitude)) {
                         hintMessage += "The correct country is further South";
                     }
-                    //uruguay -55 (correct), colombia -74
                     if (parseFloat(item.longitude) < parseFloat(currentCountry.longitude)) { 
                         hintMessage += " and East.";
                     }
@@ -46,8 +47,8 @@ const Game = () => {
             hintMessage = "Please start the game to get hints.";
         }
     
-        setHint(hintMessage); // Update the state outside the loop
-        return hintMessage; // Return the generated hint message
+        setHint(hintMessage);
+        return hintMessage; 
     }
 
     useEffect(() => {
@@ -111,18 +112,23 @@ const Game = () => {
         }
     
         const guess = inputValue.trim();
-        setPreviousGuesses([guess.toUpperCase(), ...previousGuesses]); // Add guess in uppercase to previous guesses
+        setPreviousGuesses([guess.toUpperCase(), ...previousGuesses]); 
     
         if (currentCountry && guess.toLowerCase() === currentCountry.Country_Lower) {
             setScore(score+10);
-            setHint("");  // Clear hint when the guess is correct
+            setTimeLeft(timeLeft+5);
+            setHint(""); 
             popAndDisplayNextCountry();
+
+            if (stack.isEmpty()) {
+                setShowScoreBoard(true);
+            }
         } else {
-            setScore(score+10);
+            setTimeLeft(timeLeft-10);
             console.log("Wrong guess.");
-            const newHint = generateHint(guess);  // Update to use returned hint from generateHint
+            const newHint = generateHint(guess);  
             console.log(newHint);
-            setHint(newHint);  // Set new hint in the state
+            setHint(newHint); 
         }
     
         setInputValue(""); 
@@ -142,6 +148,10 @@ const Game = () => {
     const getImagePath = (country) => {
         return country && window.globalState.gameMode === "easy" ? country['Easy Image Path'] : country['Image Path'];
     };
+
+    if (showScoreBoard || timeLeft <= 0) {
+        return <ScoreBoardScreen />;
+    }
 
     return (
         <div className="gameContainer">
@@ -180,4 +190,4 @@ const Game = () => {
     );
 };
 
-export default Game;
+export default GameScreen;
