@@ -35,6 +35,7 @@ const ContinentSelectionScreen = () => {
           filterData(); 
           window.globalState.gameContinent = continent;
           console.log("Game Filtered Data set to:", window.globalState.gameFilteredData);
+          console.log(typeof window.globalState.gameFilteredData);
       }
   }, [continent]);
 

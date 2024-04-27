@@ -1,12 +1,47 @@
 import React, { useState, useEffect } from "react";
+import WebAssemblyWrapper from './geoquest_wasm.js';
+import WebAssemblyBinary from './geoquest_wasm.wasm';
 
 const Game = () => {
     const [timeLeft, setTimeLeft] = useState(120);
     const [inputValue, setInputValue] = useState("");
     const [score, setScore] = useState(0);
     const [previousGuesses, setPreviousGuesses] = useState([]); // State to store previous guesses
+    const [Stack, setStack] = useState();
+
+    const wasmModuleInstance = WebAssemblyWrapper({
+        locateFiles: () => {
+            return WebAssemblyBinary;
+        }
+    });
+
+    const createStack = () => {
+        wasmModuleInstance.then((core) => {
+            const stack = new core.JsonStack();
+            setStack(stack);
+            console.log("stack success!")
+        });
+    };
+
+    const getSize = () => {
+        const size = Stack.size();
+        console.log(size);
+    };
 
     useEffect(() => {
+        createStack();
+        if (Stack) {
+            const stackData = JSON.parse(window.globalState.gameFilteredData);
+            stackData.forEach(item => {
+                const itemJson = JSON.stringify(item);  
+                Stack.push(itemJson);  
+                
+            });
+            getSize();
+
+
+        }
+        console.log("added to stack successfully");
         const timerInterval = setInterval(() => {
             setTimeLeft(prevTime => {
                 if (prevTime <= 1) {

@@ -15,4 +15,5 @@ $(OUTPUT_JS): $(MODULE_NAME).cpp
 	-s EXPORTED_RUNTIME_METHODS='["UTF8ToString"]' \
 	-s ENVIRONMENT="web" \
 	-s FORCE_FILESYSTEM=1 \
+	--bind \
 	--embed-file $(EMBED_FILE)
