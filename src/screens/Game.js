@@ -30,10 +30,10 @@ const Game = () => {
                         hintMessage += "The correct country is further South";
                     }
                     if (item.longitude < currentCountry.longitude) {
-                        hintMessage += " and East. ";
+                        hintMessage += " and East.";
                     }
                     if (item.longitude > currentCountry.longitude) {
-                        hintMessage += " and West. ";
+                        hintMessage += " and West.";
                     }
                 }
             });
