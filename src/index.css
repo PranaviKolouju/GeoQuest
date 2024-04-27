@@ -124,7 +124,7 @@ code {
   border-radius: 5px;
   border: 2px solid beige;
   margin-right: 20px;
-  transform: translateX(190px) translateY(400px); 
+  transform: translateX(190px) translateY(300px); 
 }
 
 .submitButton {
@@ -136,7 +136,7 @@ code {
   border-radius: 5px;
   margin-top: 10px;  /* Space between input and button */
   cursor: pointer;
-  transform: translateX(190px) translateY(400px); 
+  transform: translateX(190px) translateY(300px); 
 }
 
 .previousGuessesBox {
@@ -149,6 +149,19 @@ code {
   margin-bottom: 20px;
   transform: translateX(-500px) translateY(-250px);
   height: 400px;
+  overflow-y: auto; 
+}
+
+.hintBox {
+  background: beige;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  color: #5C4033;
+  font-size: 20px;
+  margin-bottom: 20px;
+  transform: translateX(-500px) translateY(-250px);
+  height: 150px;
   overflow-y: auto; 
 }
 

@@ -9,6 +9,7 @@ const Game = () => {
     const [previousGuesses, setPreviousGuesses] = useState([]);
     const [stack, setStack] = useState(null);
     const [currentCountry, setCurrentCountry] = useState(null);
+    const [hint, setHint] = useState("");
 
     const shuffleArray = (array) => {
         for (let i = array.length - 1; i > 0; i--) {
@@ -16,6 +17,37 @@ const Game = () => {
             [array[i], array[j]] = [array[j], array[i]];
         }
     };
+
+    const generateHint = (guess) => {
+        let hintMessage = ""; // Use `let` to allow mutation
+        if (currentCountry) { // Ensure `currentCountry` is set
+            window.globalState.gameFilteredData.forEach(item => {
+                if (item.Country_Lower === guess.toLowerCase()) {
+                    if (item.latitude < currentCountry.latitude) {
+                        hintMessage += "The correct country is further North";
+                    }
+                    if (item.latitude > currentCountry.latitude) {
+                        hintMessage += "The correct country is further South";
+                    }
+                    if (item.longitude < currentCountry.longitude) {
+                        hintMessage += " and East. ";
+                    }
+                    if (item.longitude > currentCountry.longitude) {
+                        hintMessage += " and West. ";
+                    }
+                }
+            });
+    
+            if (hintMessage === "") {
+                hintMessage = "Not a valid country in " + window.globalState.gameContinent;
+            }
+        } else {
+            hintMessage = "Please start the game to get hints.";
+        }
+    
+        setHint(hintMessage); // Update the state outside the loop
+        return hintMessage; // Return the generated hint message
+    }
 
     useEffect(() => {
         const initWasm = async () => {
@@ -76,19 +108,24 @@ const Game = () => {
             console.log("Empty input, not accepted.");
             return;
         }
-
+    
         const guess = inputValue.trim();
         setPreviousGuesses([guess.toUpperCase(), ...previousGuesses]); // Add guess in uppercase to previous guesses
-
+    
         if (currentCountry && guess.toLowerCase() === currentCountry.Country_Lower) {
             setScore(score + 1);
+            setHint("");  // Clear hint when the guess is correct
             popAndDisplayNextCountry();
         } else {
             console.log("Wrong guess.");
+            const newHint = generateHint(guess);  // Update to use returned hint from generateHint
+            console.log(newHint);
+            setHint(newHint);  // Set new hint in the state
         }
-
+    
         setInputValue(""); 
     };
+    
 
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
@@ -126,6 +163,10 @@ const Game = () => {
             </button>
             <div className="scoreBox">
                 Score: {score}
+            </div>
+            <div className="hintBox">
+                <h4>HINT</h4>
+                {hint && <div>{hint}</div>}
             </div>
             <div className="previousGuessesBox">
                 <h4>PREVIOUS GUESSES</h4>
