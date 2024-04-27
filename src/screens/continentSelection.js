@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import Game from './Game';
 
 const continents = [
-  { name: 'Africa', position: { left: '50%', top: '45%' } },
-  { name: 'Asia', position: { left: '75%', top: '20%' } },
-  { name: 'Oceania', position: { left: '94%', top: '73%' } },
-  { name: 'Europe', position: { left: '56%', top: '13%' } },
-  { name: 'North America', position: { left: '6%', top: '18%' } },
-  { name: 'South America', position: { left: '19%', top: '60%' } }
+  { name: 'Africa', position: { left: '50%', top: '50%' } },
+  { name: 'Asia', position: { left: '67%', top: '30%' } },
+  { name: 'Oceania', position: { left: '82%', top: '70%' } },
+  { name: 'Europe', position: { left: '53%', top: '25%' } },
+  { name: 'North America', position: { left: '13%', top: '27%' } },
+  { name: 'South America', position: { left: '23%', top: '60%' } }
 ];
 
 const ContinentSelectionScreen = () => {
@@ -44,7 +44,6 @@ const ContinentSelectionScreen = () => {
 
   return (
     <header className="continentSelection">
-      <h2 id="continentSelectionCaption">Choose a Continent!</h2>
       <div id="mapContainer" style={{ position: 'relative' }}>
         <img src='./images/globalMap.webp' id="worldMap" alt="World Map" style={{ width: '100%' }} />
         {continents.map((continent, index) => (

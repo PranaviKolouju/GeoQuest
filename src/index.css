@@ -6,14 +6,13 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 .App {
   text-align: center;
   background-color: #276749; 
-  min-height: 100vh; 
+  min-height: 100vh;
   margin: 0;
   font-family: Arial, sans-serif;
   padding: 0;
@@ -28,14 +27,14 @@ code {
 #gameTitle {
   color: beige;
   text-align: center;
-  font-size: 150px;
+  font-size: 18vh; /* Responsive based on viewport height */
 }
 
 #gameModeButtons button {
-  margin: 250px 75px;
-  padding: 10px 20px;
-  font-size: 40px;
-  border-radius: 20px;
+  margin: 10vh 2vw; /* Responsive spacing */
+  padding: 1vw 2vw; /* Responsive padding */
+  font-size: 4vh; /* Responsive font size */
+  border-radius: 2vw; /* Responsive border-radius */
   cursor: pointer;
   color: #5C4033;
   background-color: beige;
@@ -45,47 +44,33 @@ code {
 #gameModeDirections {
   color: beige;
   text-align: center;
-  font-size: 30px;
-}
-
-#continentSelectionCaption {
-  color: #f5f5dc;
-  text-align: center;
-  margin-bottom: 50px;
-  width: 100%;
-  font-size: 70px;
-  transform: translateY(-70px);
-  order: -1;
-  font-family: 'Papyrus Condensed'; 
+  font-size: 4vh; /* Responsive font size */
 }
 
 #mapContainer {
   position: relative;
-  width: 80%;
+  width: 90%;
   height: auto;
-  transform: translateX(200px);
+  transform: translateX(8vh);
 }
 
 #worldMap {
   width: 100%;
   height: auto;
   display: block;
-  transform: scale(1.3) translateX(-10px)  translateY(-40px); 
-  margin-top: -20px;
 }
 
 .continentButton {
   position: absolute;
-  transform: translate(-50%, -50%);
   background-color: beige;
   color: #5C4033;
   border: none;
-  border-radius: 20%;
-  padding: 10px;
+  border-radius: 2vw; /* Responsive border-radius */
+  padding: 1vw; /* Responsive padding */
   cursor: pointer;
   z-index: 1; 
   font-weight: bolder;
-  font-size: 15px;
+  font-size: 1.5vh; /* Responsive font size */
 }
 
 .continentButton:hover {
@@ -95,84 +80,80 @@ code {
 
 .timerBox {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 2vh; /* Responsive top spacing */
+  right: 2vw; /* Responsive right spacing */
   background: beige;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 1vh 1vw; /* Responsive padding */
+  border-radius: 1vh; /* Responsive border-radius */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   color: #5C4033;
-  font-size: 45px;
+  font-size: 4vh; /* Responsive font size */
 }
 
 .scoreBox {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 2vh; /* Responsive top spacing */
+  right: 2vw; /* Responsive right spacing */
   background: beige;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 1vh 1vw; /* Responsive padding */
+  border-radius: 1vh; /* Responsive border-radius */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   color: #5C4033;
-  font-size: 45px;
-  transform: translateX(-1470px)
+  font-size: 4vh; /* Responsive font size */
+  transform: translateX(-172vh);
 }
 
-.textInput {
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 5px;
+.textInput, .submitButton {
+  font-size: 1.5vh; /* Responsive font size */
+  padding: 1vh 1vw; /* Responsive padding */
+  border-radius: 0.5vh; /* Responsive border-radius */
   border: 2px solid beige;
-  margin-right: 20px;
-  transform: translateX(190px) translateY(300px); 
-}
-
-.submitButton {
-  font-size: 20px;
-  padding: 10px 20px;
-  color: #5C4033;
-  background-color: beige;
-  border: none;
-  border-radius: 5px;
-  margin-top: 10px;  /* Space between input and button */
-  cursor: pointer;
-  transform: translateX(190px) translateY(300px); 
+  margin-right: 1vw; /* Responsive margin */
+  transform: translateX(40vh) translateY(25vh);
 }
 
 .previousGuessesBox {
   background: beige;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 1vh; /* Responsive border-radius */
+  padding: 1vh 1vw; /* Responsive padding */
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   color: #5C4033;
-  font-size: 20px;
-  margin-bottom: 20px;
-  transform: translateX(-500px) translateY(-250px);
-  height: 400px;
+  font-size: 1.5vh; /* Responsive font size */
+  margin-bottom: 2vh; /* Responsive margin */
+  height: 40vh; /* Responsive height */
   overflow-y: auto; 
+  transform: translateX(-30vh) translateY(-35vh);
+  width: 20vw; 
 }
 
 .hintBox {
   background: beige;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 1vh; /* Responsive border-radius */
+  padding: 1vh 1vw; /* Responsive padding */
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   color: #5C4033;
-  font-size: 20px;
-  margin-bottom: 20px;
-  transform: translateX(-500px) translateY(-250px);
-  height: 150px;
+  font-size: 1.5vh; /* Responsive font size */
+  margin-bottom: 2vh; /* Responsive margin */
+  height: 15vh; /* Responsive height */
   overflow-y: auto; 
+  transform: translateX(-30vh) translateY(-35vh);
+  width: 20vw; 
 }
 
 .imageContainer img {
-  max-width: 100%; 
-  height: auto;    
+  height: 50vh;
+  width: 50vw;    
   display: block;  
+  transform: translateX(40vh);
+  object-fit: contain;
+}
+
+.rightColumn {
+  align-items: center;
 }
 
 .imageContainer {
-  max-width: 450px; /* Limit the size of the container */
+  max-width: 45vw; /* Responsive width */
   margin: auto;     /* Center the container if it's smaller than the parent */
-  transform: translateX(180px) translateY(200px);
+  transform: translateY(20vh);
 }

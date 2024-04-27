@@ -118,11 +118,10 @@ const GameScreen = () => {
             setScore(score+10);
             setTimeLeft(timeLeft+5);
             setHint(""); 
-            popAndDisplayNextCountry();
-
             if (stack.isEmpty()) {
                 setShowScoreBoard(true);
             }
+            popAndDisplayNextCountry();
         } else {
             setTimeLeft(timeLeft-10);
             console.log("Wrong guess.");
@@ -155,38 +154,45 @@ const GameScreen = () => {
 
     return (
         <div className="gameContainer">
-            {currentCountry && (
-                <div className="imageContainer">
-                    <img src={getImagePath(currentCountry)} alt="Country" />
+            <div className="leftColumn">
+                {currentCountry && (
+                    <div className="imageContainer">
+                        <img src={getImagePath(currentCountry)} alt="Country" />
+                    </div>
+                )}
+                <div className="inputSubmitContainer">
+                    <input
+                        type="text"
+                        value={inputValue}
+                        onChange={handleInputChange}
+                        onKeyPress={handleKeyPress}
+                        className="textInput"
+                    />
+                    <button onClick={handleSubmit} className="submitButton">
+                        Submit
+                    </button>
                 </div>
-            )}
-            <div className="timerBox">
-                {timeLeft} seconds
+                <div className="scoreBox">
+                    Score: {score}
+                </div>
             </div>
-            <input
-                type="text"
-                value={inputValue}
-                onChange={handleInputChange}
-                onKeyPress={handleKeyPress}
-                className="textInput"
-            />
-            <button onClick={handleSubmit} className="submitButton">
-                Submit
-            </button>
-            <div className="scoreBox">
-                Score: {score}
-            </div>
-            <div className="hintBox">
-                <h4>HINT</h4>
-                {hint && <div>{hint}</div>}
-            </div>
-            <div className="previousGuessesBox">
-                <h4>PREVIOUS GUESSES</h4>
-                {previousGuesses.map((guess, index) => (
-                    <div key={index}>{guess}</div>
-                ))}
+            <div className="rightColumn">
+                <div className="timerBox">
+                    {timeLeft} seconds
+                </div>
+                <div className="hintBox">
+                    <h4>HINT</h4>
+                    {hint && <div>{hint}</div>}
+                </div>
+                <div className="previousGuessesBox">
+                    <h4>PREVIOUS GUESSES</h4>
+                    {previousGuesses.map((guess, index) => (
+                        <div key={index}>{guess}</div>
+                    ))}
+                </div>
             </div>
         </div>
+
     );
 };
 
