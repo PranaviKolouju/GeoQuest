@@ -23,20 +23,19 @@ const ContinentSelectionScreen = () => {
   };
 
   const filterData = () => {
-      const filteredData = window.globalState.gameData.filter(item => item.Continent === window.globalState.gameContinent);
-
-
-      console.log("Filtered Data:", filteredData);
-      return filteredData;
+    const filteredData = window.globalState.gameData.filter(item => item.Continent === window.globalState.gameContinent);
+    console.log("Filtered Data:", filteredData);
+    window.globalState.gameFilteredData = filteredData; // Set the filtered data to the global state here
+    return filteredData;
   };
-
+  
   useEffect(() => {
-      if (continent) {
-          filterData(); 
-          window.globalState.gameContinent = continent;
-          console.log("Game Filtered Data set to:", window.globalState.gameFilteredData);
-          console.log(typeof window.globalState.gameFilteredData);
-      }
+    if (continent) {
+        window.globalState.gameContinent = continent; // Update the continent first
+        const filteredData = filterData(); 
+        console.log("Game Filtered Data set to:", window.globalState.gameFilteredData);
+        console.log(typeof window.globalState.gameFilteredData);
+    }
   }, [continent]);
 
   if (showGame) {
