@@ -23,16 +23,17 @@ const Game = () => {
         if (currentCountry) { // Ensure `currentCountry` is set
             window.globalState.gameFilteredData.forEach(item => {
                 if (item.Country_Lower === guess.toLowerCase()) {
-                    if (item.latitude < currentCountry.latitude) {
+                    if (parseFloat(item.latitude) < parseFloat(currentCountry.latitude)) {
                         hintMessage += "The correct country is further North";
                     }
-                    if (item.latitude > currentCountry.latitude) {
+                    if (parseFloat(item.latitude) > parseFloat(currentCountry.latitude)) {
                         hintMessage += "The correct country is further South";
                     }
-                    if (item.longitude < currentCountry.longitude) {
+                    //uruguay -55 (correct), colombia -74
+                    if (parseFloat(item.longitude) < parseFloat(currentCountry.longitude)) { 
                         hintMessage += " and East.";
                     }
-                    if (item.longitude > currentCountry.longitude) {
+                    if (parseFloat(item.longitude) > parseFloat(currentCountry.longitude)) {
                         hintMessage += " and West.";
                     }
                 }
@@ -113,10 +114,11 @@ const Game = () => {
         setPreviousGuesses([guess.toUpperCase(), ...previousGuesses]); // Add guess in uppercase to previous guesses
     
         if (currentCountry && guess.toLowerCase() === currentCountry.Country_Lower) {
-            setScore(score + 1);
+            setScore(score+10);
             setHint("");  // Clear hint when the guess is correct
             popAndDisplayNextCountry();
         } else {
+            setScore(score+10);
             console.log("Wrong guess.");
             const newHint = generateHint(guess);  // Update to use returned hint from generateHint
             console.log(newHint);
