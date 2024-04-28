@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import GameScreen from './Game.js';
-import { NULL } from "mysql/lib/protocol/constants/types.js";
 
 const ScoreBoardScreen = () => {
+
+    const [easyHighScores, setEasyHighScores] = useState([]);
+    const [hardHighScores, setHardHighScores] = useState([]);
+
    const currentScore = window.globalState.gameScore;
 
    const defaultStorageValues = {
@@ -132,9 +135,77 @@ const ScoreBoardScreen = () => {
           }
           await getHighScores();
         };
-      
-        initializeAndSetHighScore();
+
+        const storeHighScores = async () => {
+            const easyScores = [];
+            const hardScores = [];
+
+
+            const easyKeys = [
+                '@easy_hs_northAmerica',
+                '@easy_hs_southAmerica',
+                '@easy_hs_africa',
+                '@easy_hs_europe',
+                '@easy_hs_asia',
+                '@easy_hs_oceania'
+            ]
+    
+            const hardKeys = [
+                '@hard_hs_northAmerica',
+                '@hard_hs_southAmerica',
+                '@hard_hs_africa',
+                '@hard_hs_europe',
+                '@hard_hs_asia',
+                '@hard_hs_oceania'
+            ]
+    
+            for (let key of easyKeys) {
+                const value = await AsyncStorage.getItem(key);
+                easyScores.push(value);
+            }
+
+            for (let key of hardKeys) {
+                const value = await AsyncStorage.getItem(key);
+                hardScores.push(value);
+            }
+
+            setEasyHighScores(easyScores);
+            setHardHighScores(hardScores);
+        }
+
+        const performInitialization = async () => {
+            await initializeAndSetHighScore(); // Set up and potentially update high scores
+            await storeHighScores(); // Fetch and store the updated high scores in state
+          }
+        
+        performInitialization();
+
       }, []);
+
+
+      return (
+        <div style={{ margin: '10px' }}>
+        <h1>High Scores</h1>
+        <table style={{ width: '100%', textAlign: 'center' }}>
+            <thead>
+            <tr>
+                <th>Continent</th>
+                <th>Easy Mode</th>
+                <th>Hard Mode</th>
+            </tr>
+            </thead>
+            <tbody>
+                {['NorthAmerica', 'SouthAmerica', 'Africa', 'Europe', 'Asia', 'Oceania'].map((continent, index) => (
+                    <tr key={continent}>
+                    <td>{continent}</td>
+                    <td>{easyHighScores[index] || '0'}</td> {/* Fallback to '0' if undefined */}
+                    <td>{hardHighScores[index] || '0'}</td> {/* Fallback to '0' if undefined */}
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+        </div>
+    );
 
 };
 
