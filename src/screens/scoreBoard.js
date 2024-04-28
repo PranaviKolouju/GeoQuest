@@ -195,7 +195,7 @@ const ScoreBoardScreen = () => {
             </tr>
             </thead>
             <tbody>
-                {['NorthAmerica', 'SouthAmerica', 'Africa', 'Europe', 'Asia', 'Oceania'].map((continent, index) => (
+                {['North America', 'South America', 'Africa', 'Europe', 'Asia', 'Oceania'].map((continent, index) => (
                     <tr key={continent}>
                     <td>{continent}</td>
                     <td>{easyHighScores[index] || '0'}</td> {/* Fallback to '0' if undefined */}
