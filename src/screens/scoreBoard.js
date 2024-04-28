@@ -40,73 +40,73 @@ const ScoreBoardScreen = () => {
 
         if (window.globalState.gameContinent === "North America") {
             if (window.globalState.gameMode === "easy") {
-                if (score > AsyncStorage.getItem('@easy_hs_northAmerica')) {
-                    AsyncStorage.setItem('@easy_hs_northAmerica', score);
+                if (score > await AsyncStorage.getItem('@easy_hs_northAmerica')) {
+                    await AsyncStorage.setItem('@easy_hs_northAmerica', score);
                 }
             }
             else {
-                if (score > AsyncStorage.getItem('@hard_hs_northAmerica')) {
-                    AsyncStorage.setItem('@hard_hs_northAmerica', score);
+                if (score > await AsyncStorage.getItem('@hard_hs_northAmerica')) {
+                    await AsyncStorage.setItem('@hard_hs_northAmerica', score);
                 }
             }
         }
         if (window.globalState.gameContinent === "South America") {
             if (window.globalState.gameMode === "easy") {
-                if (score > AsyncStorage.getItem('@easy_hs_southAmerica')) {
-                    AsyncStorage.setItem('@easy_hs_southAmerica', score);
+                if (score > await AsyncStorage.getItem('@easy_hs_southAmerica')) {
+                    await AsyncStorage.setItem('@easy_hs_southAmerica', score);
                 }
             }
             else {
-                if (score > AsyncStorage.getItem('@hard_hs_southAmerica')) {
-                    AsyncStorage.setItem('@hard_hs_southAmerica', score);
+                if (score > await AsyncStorage.getItem('@hard_hs_southAmerica')) {
+                    await AsyncStorage.setItem('@hard_hs_southAmerica', score);
                 }
             }
         }
         if (window.globalState.gameContinent === "Africa") {
             if (window.globalState.gameMode === "easy") {
-                if (score > AsyncStorage.getItem('@easy_hs_africa')) {
-                    AsyncStorage.setItem('@easy_hs_africa', score);
+                if (score > await AsyncStorage.getItem('@easy_hs_africa')) {
+                    await AsyncStorage.setItem('@easy_hs_africa', score);
                 }
             }
             else {
-                if (score > AsyncStorage.getItem('@hard_hs_africa')) {
-                    AsyncStorage.setItem('@hard_hs_africa', score);
+                if (score > await AsyncStorage.getItem('@hard_hs_africa')) {
+                    await AsyncStorage.setItem('@hard_hs_africa', score);
                 }
             }
         }
         if (window.globalState.gameContinent === "Europe") {
             if (window.globalState.gameMode === "easy") {
-                if (score > AsyncStorage.getItem('@easy_hs_europe')) {
-                    AsyncStorage.setItem('@easy_hs_europe', score);
+                if (score > await AsyncStorage.getItem('@easy_hs_europe')) {
+                    await AsyncStorage.setItem('@easy_hs_europe', score);
                 }
             }
             else {
-                if (score > AsyncStorage.getItem('@hard_hs_europe')) {
-                    AsyncStorage.setItem('@hard_hs_europe', score);
+                if (score > await AsyncStorage.getItem('@hard_hs_europe')) {
+                    await AsyncStorage.setItem('@hard_hs_europe', score);
                 }
             }
         }
         if (window.globalState.gameContinent === "Asia") {
             if (window.globalState.gameMode === "easy") {
-                if (score > AsyncStorage.getItem('@easy_hs_asia')) {
-                    AsyncStorage.setItem('@easy_hs_asia', score);
+                if (score > await AsyncStorage.getItem('@easy_hs_asia')) {
+                    await AsyncStorage.setItem('@easy_hs_asia', score);
                 }
             }
             else {
-                if (score > AsyncStorage.getItem('@hard_hs_asia')) {
-                    AsyncStorage.setItem('@hard_hs_asia', score);
+                if (score > await AsyncStorage.getItem('@hard_hs_asia')) {
+                    await AsyncStorage.setItem('@hard_hs_asia', score);
                 }
             }
         }
         if (window.globalState.gameContinent === "Oceania") {
             if (window.globalState.gameMode === "easy") {
-                if (score > AsyncStorage.getItem('@easy_hs_oceania')) {
-                    AsyncStorage.setItem('@easy_hs_oceania', score);
+                if (score > await AsyncStorage.getItem('@easy_hs_oceania')) {
+                    await AsyncStorage.setItem('@easy_hs_oceania', score);
                 }
             }
             else {
-                if (score > AsyncStorage.getItem('@hard_hs_oceania')) {
-                    AsyncStorage.setItem('@hard_hs_oceania', score);
+                if (score > await AsyncStorage.getItem('@hard_hs_oceania')) {
+                    await AsyncStorage.setItem('@hard_hs_oceania', score);
                 }
             }
         }
@@ -125,13 +125,16 @@ const ScoreBoardScreen = () => {
     }
 
     useEffect(() => {
-        if (currentScore !== NULL) {
-            console.log(currentScore);
-            initializeAsyncStorage(defaultStorageValues);
-            setHighScore(currentScore);
-            getHighScores();
-            }
-    }, [])
+        const initializeAndSetHighScore = async () => {
+          await initializeAsyncStorage(defaultStorageValues);
+          if (currentScore !== null && currentScore !== undefined) { 
+            await setHighScore(currentScore);
+          }
+          await getHighScores();
+        };
+      
+        initializeAndSetHighScore();
+      }, []);
 
 };
 
