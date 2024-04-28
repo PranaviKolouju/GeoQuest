@@ -156,3 +156,79 @@ code {
   margin: auto;     /* Center the container if it's smaller than the parent */
   transform: translateY(20vh);
 }
+
+.scoreboard-container {
+  margin: 10px;
+}
+
+.scoreboard-title {
+  text-align: center;
+  color: beige; /* Sets the title color to beige */
+  font-size: 8vh;
+  transform: translateY(-5vh);
+}
+
+.scoreboard-table {
+  width: 100%; /* Sets the table to fit the width of the container */
+  border-collapse: collapse; /* Collapses the border to remove any space between them */
+}
+
+.scoreboard-table th,
+.scoreboard-table td {
+  border-bottom: 2px solid #ddd; /* Adds a line between each row */
+  padding: 8px;
+  color: beige; /* Sets the text color in the table to beige */
+  font-size: 5vh;
+  padding-left: 100px; /* Adjust this value as needed for more space on the left */
+  padding-right: 100px;
+  padding-top: 20px; /* Adjust this value as needed for more space on the left */
+  padding-bottom: 20px;
+}
+
+/* Add this to remove the border for the last row */
+.scoreboard-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Adjust this if you want a specific font size for the table data */
+.scoreboard-table td {
+  font-size: 4vh; /* Example to set the font size, adjust as needed */
+}
+
+/* Make sure the headers are bold and perhaps a slightly different color if needed */
+.scoreboard-table th {
+  font-weight: bold;
+  color: beige; /* Beige color for header text */
+}
+
+.playAgain-button {
+  position: absolute;
+  background-color: beige;
+  color: #5C4033;
+  border: none;
+  border-radius: 1vw; /* Responsive border-radius */
+  padding: 1vw; /* Responsive padding */
+  cursor: pointer;
+  z-index: 1; 
+  font-weight: bolder;
+  font-size: 2.5vh; /* Responsive font size */
+  top: 20px; /* Adjust the value to align with the top */
+  left: 20px; /* Align with the left side */
+  width: 20vh
+}
+
+.quit-button {
+  position: absolute;
+  background-color: beige;
+  color: #5C4033;
+  border: none;
+  border-radius: 1vw; /* Responsive border-radius */
+  padding: 1vw; /* Responsive padding */
+  cursor: pointer;
+  z-index: 1; 
+  font-weight: bolder;
+  font-size: 2.5vh; /* Responsive font size */
+  top: 20px; /* Adjust the value to align with the top */
+  right: 20px; /* Align with the right side */
+  width: 20vh
+}

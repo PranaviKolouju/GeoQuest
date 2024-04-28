@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import GameScreen from './Game.js';
+import GameModeSelectionScreen from "./gameModeSelection.js";
 
 const ScoreBoardScreen = () => {
 
     const [easyHighScores, setEasyHighScores] = useState([]);
     const [hardHighScores, setHardHighScores] = useState([]);
+    const [showGameModeSelection, setShowGameModeSelection] = useState(false);
 
    const currentScore = window.globalState.gameScore;
 
@@ -182,30 +184,40 @@ const ScoreBoardScreen = () => {
 
       }, []);
 
+      const playAgain = () => {
+        setShowGameModeSelection(true);
+      }
+
+      if (showGameModeSelection) {
+        return <GameModeSelectionScreen />;
+      }
+
 
       return (
-        <div style={{ margin: '10px' }}>
-        <h1>High Scores</h1>
-        <table style={{ width: '100%', textAlign: 'center' }}>
+        <div className="scoreboard-container">
+            <button className="playAgain-button" onClick = {playAgain}>Play Again</button>
+            <button className="quit-button right-button">Quit</button>
+          <h1 className="scoreboard-title">High Scores</h1>
+          <table className="scoreboard-table">
             <thead>
-            <tr>
+              <tr>
                 <th>Continent</th>
                 <th>Easy Mode</th>
                 <th>Hard Mode</th>
-            </tr>
+              </tr>
             </thead>
             <tbody>
-                {['North America', 'South America', 'Africa', 'Europe', 'Asia', 'Oceania'].map((continent, index) => (
-                    <tr key={continent}>
-                    <td>{continent}</td>
-                    <td>{easyHighScores[index] || '0'}</td> {/* Fallback to '0' if undefined */}
-                    <td>{hardHighScores[index] || '0'}</td> {/* Fallback to '0' if undefined */}
-                    </tr>
-                ))}
+              {['North America', 'South America', 'Africa', 'Europe', 'Asia', 'Oceania'].map((continent, index) => (
+                <tr key={continent}>
+                  <td>{continent}</td>
+                  <td>{easyHighScores[index] || '0'}</td> {/* Fallback to '0' if undefined */}
+                  <td>{hardHighScores[index] || '0'}</td> {/* Fallback to '0' if undefined */}
+                </tr>
+              ))}
             </tbody>
-        </table>
+          </table>
         </div>
-    );
+      );
 
 };
 
