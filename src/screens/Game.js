@@ -12,6 +12,7 @@ const GameScreen = () => {
     const [currentCountry, setCurrentCountry] = useState(null);
     const [hint, setHint] = useState("");
     const [showScoreBoard, setShowScoreBoard] = useState(false);
+    const [remainingCountries, setRemainingCountries] = useState(null);
 
     const shuffleArray = (array) => {
         for (let i = array.length - 1; i > 0; i--) {
@@ -111,27 +112,46 @@ const GameScreen = () => {
             return;
         }
     
-        const guess = inputValue.trim();
-        setPreviousGuesses([guess.toUpperCase(), ...previousGuesses]); 
+        const guess = inputValue.trim().toLowerCase();
+        const isValidCountry = window.globalState.gameFilteredData.some(item => item.Country_Lower === guess);
+        
+        // If it's a valid country then add to previous guesses
+        if (isValidCountry) {
+            setPreviousGuesses([guess.toUpperCase(), ...previousGuesses]);
+        }
     
-        if (currentCountry && guess.toLowerCase() === currentCountry.Country_Lower) {
-            setScore(score+10);
-            setTimeLeft(timeLeft+5);
-            setHint(""); 
+        if (currentCountry && guess === currentCountry.Country_Lower) {
+            setScore(score + 10);
+            setTimeLeft(timeLeft + 5);
+            setHint("");
+            setRemainingCountries(remainingCountries-1);
             if (stack.isEmpty()) {
                 setShowScoreBoard(true);
             }
             popAndDisplayNextCountry();
+            setPreviousGuesses([]); // Clear previous guesses when a country is guessed correctly
         } else {
-            setTimeLeft(timeLeft-10);
+            setTimeLeft(timeLeft - 10);
             console.log("Wrong guess.");
-            const newHint = generateHint(guess);  
-            console.log(newHint);
-            setHint(newHint); 
+            const newHint = generateHint(guess);
+            if (isValidCountry) {
+                console.log(newHint);
+                setHint(newHint);
+            }
         }
     
-        setInputValue(""); 
+        setInputValue("");
     };
+
+    useEffect(() => {
+        const updateRemainingCountries = async () => {
+            if (stack) {
+                const remaining = await stack.size()+1;
+                setRemainingCountries(remaining);
+            }
+        };
+        updateRemainingCountries();
+    }, [stack]);
     
 
     const handleInputChange = (event) => {
@@ -159,6 +179,9 @@ const GameScreen = () => {
 
     return (
         <div className="gameContainer">
+            <div className="remainingBox">
+                    Remaining Countries: {remainingCountries}
+            </div>
             <div className="leftColumn">
                 {currentCountry && (
                     <div className="imageContainer">

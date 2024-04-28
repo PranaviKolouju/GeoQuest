@@ -102,6 +102,18 @@ code {
   font-size: 4vh; /* Responsive font size */
 }
 
+.remainingBox {
+  left: 70vh;
+  top: 2vh;
+  position: fixed;
+  background: beige;
+  padding: 1vh 1vw; /* Responsive padding */
+  border-radius: 1vh; /* Responsive border-radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #5C4033;
+  font-size: 4vh; /* Responsive font size */
+}
+
 .textInput, .submitButton {
   font-size: 1.5vh; /* Responsive font size */
   padding: 1vh 1vw; /* Responsive padding */
