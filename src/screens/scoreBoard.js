@@ -188,6 +188,10 @@ const ScoreBoardScreen = () => {
         setShowGameModeSelection(true);
       }
 
+      const quitGame = () => {
+         window.close();
+      }
+
       if (showGameModeSelection) {
         return <GameModeSelectionScreen />;
       }
@@ -196,7 +200,7 @@ const ScoreBoardScreen = () => {
       return (
         <div className="scoreboard-container">
             <button className="playAgain-button" onClick = {playAgain}>Play Again</button>
-            <button className="quit-button right-button">Quit</button>
+            <button className="quit-button" onClick = {quitGame}>Quit</button>
           <h1 className="scoreboard-title">High Scores</h1>
           <table className="scoreboard-table">
             <thead>
