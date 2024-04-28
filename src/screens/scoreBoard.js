@@ -125,10 +125,13 @@ const ScoreBoardScreen = () => {
     }
 
     useEffect(() => {
-        initializeAsyncStorage(defaultStorageValues);
-        setHighScore(currentScore);
-        getHighScores();
-    })
+        if (currentScore !== NULL) {
+            console.log(currentScore);
+            initializeAsyncStorage(defaultStorageValues);
+            setHighScore(currentScore);
+            getHighScores();
+            }
+    }, [])
 
 };
 
