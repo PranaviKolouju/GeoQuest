@@ -25,13 +25,13 @@ const ContinentSelectionScreen = () => {
   const filterData = () => {
     const filteredData = window.globalState.gameData.filter(item => item.Continent === window.globalState.gameContinent);
     console.log("Filtered Data:", filteredData);
-    window.globalState.gameFilteredData = filteredData; // Set the filtered data to the global state here
+    window.globalState.gameFilteredData = filteredData;
     return filteredData;
   };
   
   useEffect(() => {
     if (continent) {
-        window.globalState.gameContinent = continent; // Update the continent first
+        window.globalState.gameContinent = continent;
         const filteredData = filterData(); 
         console.log("Game Filtered Data set to:", window.globalState.gameFilteredData);
         console.log(typeof window.globalState.gameFilteredData);
@@ -49,7 +49,7 @@ const ContinentSelectionScreen = () => {
         {continents.map((continent, index) => (
           <button
             key={index}
-            className="continentButton" // Apply CSS class
+            className="continentButton"
             id={`continentButton${index}`}
             style={{
               left: continent.position.left,

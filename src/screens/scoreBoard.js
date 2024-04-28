@@ -30,7 +30,7 @@ const ScoreBoardScreen = () => {
     try {
       await Promise.all(Object.keys(defaultValues).map(async (key) => {
         const value = await AsyncStorage.getItem(key);
-        if (value === null) { // The key does not exist
+        if (value === null) {
           await AsyncStorage.setItem(key, defaultValues[key]);
         }
         console.log("values initialized correctly");
@@ -176,8 +176,8 @@ const ScoreBoardScreen = () => {
         }
 
         const performInitialization = async () => {
-            await initializeAndSetHighScore(); // Set up and potentially update high scores
-            await storeHighScores(); // Fetch and store the updated high scores in state
+            await initializeAndSetHighScore();
+            await storeHighScores();
           }
         
         performInitialization();
@@ -214,8 +214,8 @@ const ScoreBoardScreen = () => {
               {['North America', 'South America', 'Africa', 'Europe', 'Asia', 'Oceania'].map((continent, index) => (
                 <tr key={continent}>
                   <td>{continent}</td>
-                  <td>{easyHighScores[index] || '0'}</td> {/* Fallback to '0' if undefined */}
-                  <td>{hardHighScores[index] || '0'}</td> {/* Fallback to '0' if undefined */}
+                  <td>{easyHighScores[index] || '0'}</td>
+                  <td>{hardHighScores[index] || '0'}</td>
                 </tr>
               ))}
             </tbody>

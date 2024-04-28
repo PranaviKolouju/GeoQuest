@@ -12,8 +12,8 @@ module.exports = {
 
   plugins: [
     new webpack.DefinePlugin({
-      'self': 'window', // Assumes 'window' is the global context
-      'globalThis': 'window' // Provide a fallback for 'globalThis'
+      'self': 'window',
+      'globalThis': 'window'
     })
   ]
 };

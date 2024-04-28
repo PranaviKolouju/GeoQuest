@@ -42,7 +42,6 @@ public:
     }
 };
 
-// Emscripten bindings
 EMSCRIPTEN_BINDINGS(my_module) {
     class_<JsonStack>("JsonStack")
         .constructor()

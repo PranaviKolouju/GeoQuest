@@ -115,7 +115,6 @@ const GameScreen = () => {
         const guess = inputValue.trim().toLowerCase();
         const isValidCountry = window.globalState.gameFilteredData.some(item => item.Country_Lower === guess);
         
-        // If it's a valid country then add to previous guesses
         if (isValidCountry) {
             setPreviousGuesses([guess.toUpperCase(), ...previousGuesses]);
         }
@@ -129,7 +128,7 @@ const GameScreen = () => {
                 setShowScoreBoard(true);
             }
             popAndDisplayNextCountry();
-            setPreviousGuesses([]); // Clear previous guesses when a country is guessed correctly
+            setPreviousGuesses([]);
         } else {
             setTimeLeft(timeLeft - 10);
             console.log("Wrong guess.");

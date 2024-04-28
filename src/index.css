@@ -27,14 +27,14 @@ code {
 #gameTitle {
   color: beige;
   text-align: center;
-  font-size: 18vh; /* Responsive based on viewport height */
+  font-size: 18vh;
 }
 
 #gameModeButtons button {
-  margin: 10vh 2vw; /* Responsive spacing */
-  padding: 1vw 2vw; /* Responsive padding */
-  font-size: 4vh; /* Responsive font size */
-  border-radius: 2vw; /* Responsive border-radius */
+  margin: 10vh 2vw;
+  padding: 1vw 2vw;
+  font-size: 4vh;
+  border-radius: 2vw;
   cursor: pointer;
   color: #5C4033;
   background-color: beige;
@@ -44,7 +44,7 @@ code {
 #gameModeDirections {
   color: beige;
   text-align: center;
-  font-size: 4vh; /* Responsive font size */
+  font-size: 4vh;
 }
 
 #mapContainer {
@@ -65,12 +65,12 @@ code {
   background-color: beige;
   color: #5C4033;
   border: none;
-  border-radius: 2vw; /* Responsive border-radius */
-  padding: 1vw; /* Responsive padding */
+  border-radius: 2vw;
+  padding: 1vw;
   cursor: pointer;
   z-index: 1; 
   font-weight: bolder;
-  font-size: 1.5vh; /* Responsive font size */
+  font-size: 1.5vh;
 }
 
 .continentButton:hover {
@@ -80,14 +80,14 @@ code {
 
 .timerBox {
   position: fixed;
-  top: 2vh; /* Responsive top spacing */
-  right: 2vw; /* Responsive right spacing */
+  top: 2vh;
+  right: 2vw;
   background: beige;
-  padding: 1vh 1vw; /* Responsive padding */
-  border-radius: 1vh; /* Responsive border-radius */
+  padding: 1vh 1vw;
+  border-radius: 1vh;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   color: #5C4033;
-  font-size: 4vh; /* Responsive font size */
+  font-size: 4vh;
 }
 
 .scoreBox {
@@ -95,11 +95,11 @@ code {
   top: 2vh;
   position: fixed;
   background: beige;
-  padding: 1vh 1vw; /* Responsive padding */
-  border-radius: 1vh; /* Responsive border-radius */
+  padding: 1vh 1vw;
+  border-radius: 1vh;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   color: #5C4033;
-  font-size: 4vh; /* Responsive font size */
+  font-size: 4vh;
 }
 
 .remainingBox {
@@ -107,31 +107,31 @@ code {
   top: 2vh;
   position: fixed;
   background: beige;
-  padding: 1vh 1vw; /* Responsive padding */
-  border-radius: 1vh; /* Responsive border-radius */
+  padding: 1vh 1vw;
+  border-radius: 1vh;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   color: #5C4033;
-  font-size: 4vh; /* Responsive font size */
+  font-size: 4vh;
 }
 
 .textInput, .submitButton {
-  font-size: 1.5vh; /* Responsive font size */
-  padding: 1vh 1vw; /* Responsive padding */
-  border-radius: 0.5vh; /* Responsive border-radius */
+  font-size: 1.5vh;
+  padding: 1vh 1vw;
+  border-radius: 0.5vh;
   border: 2px solid beige;
-  margin-right: 1vw; /* Responsive margin */
+  margin-right: 1vw;
   transform: translateX(40vh) translateY(25vh);
 }
 
 .previousGuessesBox {
   background: beige;
-  border-radius: 1vh; /* Responsive border-radius */
-  padding: 1vh 1vw; /* Responsive padding */
+  border-radius: 1vh;
+  padding: 1vh 1vw;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   color: #5C4033;
-  font-size: 1.5vh; /* Responsive font size */
-  margin-bottom: 2vh; /* Responsive margin */
-  height: 40vh; /* Responsive height */
+  font-size: 1.5vh;
+  margin-bottom: 2vh;
+  height: 40vh;
   overflow-y: auto; 
   transform: translateX(-30vh) translateY(-35vh);
   width: 20vw; 
@@ -139,13 +139,13 @@ code {
 
 .hintBox {
   background: beige;
-  border-radius: 1vh; /* Responsive border-radius */
-  padding: 1vh 1vw; /* Responsive padding */
+  border-radius: 1vh;
+  padding: 1vh 1vw;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   color: #5C4033;
-  font-size: 1.5vh; /* Responsive font size */
-  margin-bottom: 2vh; /* Responsive margin */
-  height: 15vh; /* Responsive height */
+  font-size: 1.5vh;
+  margin-bottom: 2vh;
+  height: 15vh;
   overflow-y: auto; 
   transform: translateX(-30vh) translateY(-35vh);
   width: 20vw; 
@@ -164,8 +164,8 @@ code {
 }
 
 .imageContainer {
-  max-width: 45vw; /* Responsive width */
-  margin: auto;     /* Center the container if it's smaller than the parent */
+  max-width: 45vw;
+  margin: auto;
   transform: translateY(20vh);
 }
 
@@ -175,42 +175,39 @@ code {
 
 .scoreboard-title {
   text-align: center;
-  color: beige; /* Sets the title color to beige */
+  color: beige;
   font-size: 8vh;
   transform: translateY(-5vh);
 }
 
 .scoreboard-table {
-  width: 100%; /* Sets the table to fit the width of the container */
-  border-collapse: collapse; /* Collapses the border to remove any space between them */
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .scoreboard-table th,
 .scoreboard-table td {
-  border-bottom: 2px solid #ddd; /* Adds a line between each row */
+  border-bottom: 2px solid #ddd;
   padding: 8px;
-  color: beige; /* Sets the text color in the table to beige */
+  color: beige;
   font-size: 5vh;
-  padding-left: 100px; /* Adjust this value as needed for more space on the left */
+  padding-left: 100px;
   padding-right: 100px;
-  padding-top: 20px; /* Adjust this value as needed for more space on the left */
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
-/* Add this to remove the border for the last row */
 .scoreboard-table tr:last-child td {
   border-bottom: none;
 }
 
-/* Adjust this if you want a specific font size for the table data */
 .scoreboard-table td {
-  font-size: 4vh; /* Example to set the font size, adjust as needed */
+  font-size: 4vh;
 }
 
-/* Make sure the headers are bold and perhaps a slightly different color if needed */
 .scoreboard-table th {
   font-weight: bold;
-  color: beige; /* Beige color for header text */
+  color: beige;
 }
 
 .playAgain-button {
@@ -218,14 +215,14 @@ code {
   background-color: beige;
   color: #5C4033;
   border: none;
-  border-radius: 1vw; /* Responsive border-radius */
-  padding: 1vw; /* Responsive padding */
+  border-radius: 1vw;
+  padding: 1vw;
   cursor: pointer;
   z-index: 1; 
   font-weight: bolder;
-  font-size: 2.5vh; /* Responsive font size */
-  top: 20px; /* Adjust the value to align with the top */
-  left: 20px; /* Align with the left side */
+  font-size: 2.5vh;
+  top: 20px;
+  left: 20px;
   width: 20vh
 }
 
@@ -234,13 +231,13 @@ code {
   background-color: beige;
   color: #5C4033;
   border: none;
-  border-radius: 1vw; /* Responsive border-radius */
-  padding: 1vw; /* Responsive padding */
+  border-radius: 1vw;
+  padding: 1vw;
   cursor: pointer;
   z-index: 1; 
   font-weight: bolder;
-  font-size: 2.5vh; /* Responsive font size */
-  top: 20px; /* Adjust the value to align with the top */
-  right: 20px; /* Align with the right side */
+  font-size: 2.5vh;
+  top: 20px;
+  right: 20px;
   width: 20vh
 }
