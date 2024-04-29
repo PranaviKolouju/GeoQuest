@@ -55,7 +55,7 @@ describe('GameModeSelectionScreen', () => {
     test('sets the game mode correctly to "easy" when the Easy Mode button is clicked', async () => {
         const { getByText } = render(<GameModeSelectionScreen />);
         
-        const easyButton = getByText('Easy Mode');
+        const easyButton = screen.getByText('Easy Mode');
         fireEvent.click(easyButton);
 
         await waitFor(() => expect(window.globalState.gameMode).toBe('easy'));
@@ -64,7 +64,7 @@ describe('GameModeSelectionScreen', () => {
     test('sets the game mode correctly to "hard" when the Hard Mode button is clicked', async () => {
         const { getByText } = render(<GameModeSelectionScreen />);
         
-        const hardButton = getByText('Hard Mode');
+        const hardButton = screen.getByText('Hard Mode');
         fireEvent.click(hardButton);
         await waitFor(() => expect(window.globalState.gameMode).toBe('hard'));
     });
@@ -73,7 +73,7 @@ describe('GameModeSelectionScreen', () => {
 describe('ScoreBoardScreen', () => {
   test('shows game mode selection screen when "Play Again" button is clicked', async () => {
       const { getByText } = render(<ScoreBoardScreen />);
-      fireEvent.click(getByText('Play Again'));
+      fireEvent.click(screen.getByText('Play Again'));
       expect(window.location.href).toBe('http://localhost/');
   });
 
@@ -81,7 +81,7 @@ describe('ScoreBoardScreen', () => {
       delete window.close;
       window.close = jest.fn();
       const { getByText } = render(<ScoreBoardScreen />);
-      fireEvent.click(getByText('Quit'));
+      fireEvent.click(screen.getByText('Quit'));
       expect(window.close).toHaveBeenCalled();
   });
 });
@@ -126,3 +126,4 @@ describe('JsonStack', () => {
         expect(() => stack.top()).toThrow("Stack is empty");
     });
 });
+
