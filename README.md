@@ -46,6 +46,9 @@ Windows Operating System and macOS.
 - react@18.3.1
 - web-vitals@2.1.4
 
+**Parent Repo:**
+- https://github.com/oam67/Software_Engineering_Project.git
+
 &ensp;
 # **Instructions**
 
@@ -54,11 +57,11 @@ Windows Operating System and macOS.
 - Select "Hard Mode" to guess countries without geographical context.
 
 **Continent Selection:**
-- Select the continent you which to guess countries from.
+- Select the continent you wish to guess countries from.
 
 **Game:**
-- When a country is displayed, type your guess into the textbox and click "Submit" or type "Enter".
+- When a country is displayed, type your guess into the textbox and click "Submit" or hit the "Enter" key.
 - If your guess is correct, you will be awarded 10 points and will receive 5 extra seconds of time. 
-- If your guess is incorrect, you will lose 10 seconds of time. If your guess is still a valid country within the continent, you will receive a hint.
-- If you guess all the countries in the continent or time runs out, the game will end and you will be shown your score board of all your high scores. 
-- You can choose to play again or quit the game
+- If your guess is incorrect, you will lose 10 seconds of time. If your guess is a valid country within the continent, you will receive a hint.
+- If you guess all the countries in the continent or time runs out, the game will end and you will be shown your score board with all your high scores for that session. 
+- You can choose to play again or quit the game.
