@@ -46,7 +46,7 @@ Windows Operating System and macOS.
 - react@18.3.1
 - web-vitals@2.1.4
 
-**Parent Repo:**
+**Parent Repository:**
 - https://github.com/oam67/Software_Engineering_Project.git
 
 &ensp;
