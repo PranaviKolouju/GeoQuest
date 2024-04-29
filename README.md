@@ -2,7 +2,7 @@
 
 **Setup:**
 
-To compile the application, ensure that the GeoQuest repository is cloned onto your personal computer. Navigate to the directory of the cloned repository on a terminal. From there, navigate to the emsdk file to clone the public emsdk repo using the following commands:
+To compile the application, ensure that the GeoQuest repository is cloned onto your personal computer. Navigate to the directory of the cloned repository on a terminal. From there, navigate to the emsdk folder to pull the emsdk submodule using the following commands:
 
 - git submodule init
 - git submodule update
