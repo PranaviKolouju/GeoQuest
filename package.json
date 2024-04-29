@@ -29,7 +29,18 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "globals": {
+      "self": "readonly",
+      "globalThis": "readonly",
+      "Browser": "readonly",          
+      "FinalizationRegistry": "readonly" ,
+      "readline": "writable"
+    },
+    "rules": {
+      "no-restricted-globals": ["off"],
+      "no-unused-expressions": "off"
+    }
   },
   "browserslist": {
     "production": [
