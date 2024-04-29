@@ -33,12 +33,14 @@
     "globals": {
       "self": "readonly",
       "globalThis": "readonly",
-      "Browser": "readonly",          
-      "FinalizationRegistry": "readonly" ,
+      "Browser": "readonly",
+      "FinalizationRegistry": "readonly",
       "readline": "writable"
     },
     "rules": {
-      "no-restricted-globals": ["off"],
+      "no-restricted-globals": [
+        "off"
+      ],
       "no-unused-expressions": "off"
     }
   },

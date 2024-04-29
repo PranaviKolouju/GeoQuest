@@ -5036,7 +5036,7 @@ function dbg(...args) {
        */
       var dummy = createNamedFunction(constructor.name || 'unknownFunctionName', function(){});
       dummy.prototype = constructor.prototype;
-      var obj = new dummy;
+      var obj = new dummy();
   
       var r = constructor.apply(obj, argumentList);
       return (r instanceof Object) ? r : obj;
